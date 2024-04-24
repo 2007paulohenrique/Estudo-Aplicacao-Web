@@ -1,0 +1,46 @@
+body {
+  background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(4, 31, 93));
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vh;
+  font-family: 'Roboto', 'Open Sans', 'Montserrat', Arial, sans-serif;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.login-box {
+  border: 1px solid #fff;
+  background-image: linear-gradient(to bottom right, rgb(222, 217, 217), rgb(43, 111, 136));
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  border-radius: 10%;
+  box-shadow: -2px 2px rgb(167, 165, 165);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.parte-login-box {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.titulo {
+  font-size: 50px;
+  font-weight: bold ;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+input {
+  font-size: 15px;
+  width: 300px;
+  height: 30px;
+}
