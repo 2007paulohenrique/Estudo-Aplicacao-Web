@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> TESTE PARA CSS </title>
+
+        <!-- usar CSS com link externo -->
+        <link rel="stylesheet" href="conceitos.css" title="Estilo">
+
+        <!-- CSS interno - aplicado na tag <style> no <head> para adicionar estilo somente na pagina aplicada -->
+        <style>
+            h1 {
+            color: rgb(134, 134, 210);
+            }
+        </style>
+    </head>
+
+    <body>
+        <p> texto </p>
+        <p class="destaque"> texto com classe </p>
+        <p id="aumento"> texto com id </p>
+
+        <!-- CSS embutido - usado diretamente em elementos no HTML com style="" -->
+        <p style="color: aqua;"> estilo css embutido</p>
+   
+        <p><h1> estilo interno </h1></p>
+
+        <div>
+            box model
+        </div>
+
+        <!-- somente os elementos que sao filhos diretos de <ul> serao estilizados -->
+        <ul>
+            <li> filho </li>
+            <li> filho </li>
+            <ol>
+                <li> item </li>
+                <li> item </li>
+            </ol>
+            <li> filho </li>
+        </ul>
+
+        <h2>Título 1</h2>
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <h2>Título 2</h2>
+        <p>Parágrafo 3</p>
+
+        <div class="container">
+            <p>Item 1</p>
+            <p>Item 2</p>
+            <p>Item 3</p>
+        </div>
+
+        <div class="container2">
+            <p>Item 1</p>
+            <p>Item 2</p>
+            <p>Item 3</p>
+            <p>Item 4</p>
+            <p>Item 5</p>
+            <p>Item 6</p>
+        </div>
+    </body>
+</html>

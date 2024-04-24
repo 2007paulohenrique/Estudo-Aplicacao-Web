@@ -1,0 +1,97 @@
+/* comentario */
+
+/* folha de estilo externa - arquivo CSS separado e vinculado a um documento HTML usando a tag <link> no <head> - melhor organizacao e manutencao */
+
+/* seletor - usados para selecionar os elementos HTML aos quais voce deseja aplicar estilos */
+
+p {
+    color: blue; /* propriedade - aspecto: valor; */
+}
+
+/* classe - .nome-da-classe */
+/* usada em elementos especificos no HTML para uma estilizacao */
+
+.destaque {
+    font-weight: bold;
+}
+
+/* id - #nome */
+/* usada em um elemento especifico no HTML para uma estilizacao */
+
+#aumento {
+    font-size: 34px;
+}
+
+/* 
+box model - descreve como os elementos HTML são renderizados em relacao ao seu conteudo, preenchimento, borda e margens 
+padding - espaco entre o contudo e a borda
+border - linha que circunda a caixa de conteudo e seu preenchimento
+margin - espaco entre a borda do elemento e outros elementos ao redor
+*/
+
+div {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+/* seletores avancados */
+
+/* 
+seletor de filho 
+estiliza seletivamente os elementos que sao filhos de um elemento pai especifico - pai > filho 
+nesse caso, os elementos <li> serao estilizados se forem filhos de um elemento <ul>
+*/
+
+ul > li {
+    color: rgb(2, 2, 30);
+}
+
+/* 
+seletor de adjacente 
+estiliza os elementos cujo ha um outro elemento imediatamente anterior a ele - anterior + estilizado
+nesse caso, o elemento <p> sera estilizado somente se antes dele tiver um <h2>
+*/
+
+h2 + p {
+    font-weight: bold;
+}
+
+/* 
+seletor de irmãos gerais 
+estiliza os elementos que possuem o mesmo elemento pai que outro elemento - irmao ~ estilizado
+nesse caso, o elemento <p> sera estilizado somente se tiver o mesmo elemento pai que algum elemento <h2>
+*/
+
+h2 ~ p {
+    font-style: italic;
+}
+
+/* flexbox - display: flex */
+
+/* torna mais facil alinhar elementos dentro de um conteiner, seja em linha ou coluna */
+
+.container {
+    width: min-content;
+    display: flex;
+    flex-direction: column; /* direcao dos itens */
+    justify-content: center; /* Centraliza os itens na linha vertical */ 
+    align-items: center; /* Centraliza os itens na linha horizontal */
+}
+
+/* grid - display: grid */
+
+/* permite dividir o espaco de uma pagina em uma grade de linhas e colunas, facilitando o posicionamento de elementos */
+
+.container2 {
+    width: 500px;
+    align-items: center; /* Centraliza o conteudo dos itens do conteiner na linha horizontal */
+    justify-items: center; /* Centraliza o conteudo dos itens do conteiner na linha vertical */
+    height: min-content;
+    display: grid;
+    grid-template-rows: 100px 100px; /* duas linhas com 100px de altura cada */
+    grid-template-columns: 1fr 1fr 1fr; /* tres colunas com larguras iguais - fr = quantidade de partes de largura do conteiner que a coluna ocupa */
+    grid-gap: 20px; /* Espaçamento entre as células */
+}
