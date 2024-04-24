@@ -23,6 +23,7 @@ const PI = 3.14;
 // tipos de dados:
 
 var numero = 10;
+var decimal = 2.234;
 var texto = "Olá, mundo!";
 var booleano = true;
 var lista = [1, 2, 3, 4, 5];
