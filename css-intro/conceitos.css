@@ -26,7 +26,7 @@ p {
 box model - descreve como os elementos HTML são renderizados em relacao ao seu conteudo, preenchimento, borda e margens 
 padding - espaco entre o contudo e a borda
 border - linha que circunda a caixa de conteudo e seu preenchimento
-margin - espaco entre a borda do elemento e outros elementos ao redor
+margin - espaco entre a borda do elemento e outros elementos ao redor - margin: supinf laterais ou margin: todososlados
 */
 
 div {
@@ -73,7 +73,7 @@ h2 ~ p {
 
 /* torna mais facil alinhar elementos dentro de um conteiner, seja em linha ou coluna */
 
-.container {
+.container-flex {
     width: min-content;
     display: flex;
     flex-direction: column; /* direcao dos itens */
@@ -85,13 +85,51 @@ h2 ~ p {
 
 /* permite dividir o espaco de uma pagina em uma grade de linhas e colunas, facilitando o posicionamento de elementos */
 
-.container2 {
+.container-grid {
     width: 500px;
-    align-items: center; /* Centraliza o conteudo dos itens do conteiner na linha horizontal */
-    justify-items: center; /* Centraliza o conteudo dos itens do conteiner na linha vertical */
-    height: min-content;
+    height: 300px;
+    place-items: center;
     display: grid;
-    grid-template-rows: 100px 100px; /* duas linhas com 100px de altura cada */
+    grid-template-rows: 150px 150px; /* duas linhas com 150px de altura cada */
     grid-template-columns: 1fr 1fr 1fr; /* tres colunas com larguras iguais - fr = quantidade de partes de largura do conteiner que a coluna ocupa */
     grid-gap: 20px; /* Espaçamento entre as células */
+    margin: 0 auto; /* auto faz com a margem lateral seja igual para esquerda e direita, centralizando o conteiner em seu conteiner pai */
+}
+
+/* animacao de itens */
+/* transition - propriedade que sera animada tempo de duracao da animacao curva de velocidade */
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to top, #000000, #76b0eb); /* fundo com degrade - direcao, cor inicial, cor final */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    transition: transform 0.3s ease; /* transition - define o tipo de transicao para o elemento depois que sera animado */
+}
+
+/* 
+pseudoclasses
+nesse caso usada para mostrar que a classe item sera animado
+classe:pseudoclasse
+hover - animacao quando o mouse passar sobre o elemento com a classe item
+*/
+
+.item:hover {
+    transform: translateY(-10px); /* Move o item para cima ao passar o mouse sobre ele */
+}
+
+/* backgroud */
+
+.fundo {
+    background-color: #ee80c7; /* cor de fundo */
+    background-image: url("url da imagem"); 
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda o fundo */
+    background-position: center;
+    background-image: linear-gradient(to top, #303030, #ee81e8); /* fundo com degrade */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
