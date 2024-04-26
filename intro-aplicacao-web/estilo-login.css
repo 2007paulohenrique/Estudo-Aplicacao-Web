@@ -1,0 +1,45 @@
+body {
+    background-image: linear-gradient(to top, #000000, #5bbed0);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* porcentagem da altura total da janela */
+}
+
+.circulo {
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient(circle at center, transparent, rgba(255, 255, 255, 0.22), white);
+    background-position: center;
+    background-size: cover;
+    border: 2px solid #ffffff;
+}
+
+.circulo1 {
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.circulo2 {
+    bottom: 50px;
+    right: 660px;
+    width: 250px;
+    height: 250px;
+}
+
+.circulo3 {
+    bottom: 480px;
+    right: 260px;
+    width: 150px;
+    height: 150px;
+}
+
+.circulo4 {
+    bottom: 80px;
+    right: 60px;
+    width: 300px;
+    height: 300px;
+}
