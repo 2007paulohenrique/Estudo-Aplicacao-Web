@@ -97,7 +97,15 @@ h2 ~ p {
 }
 
 /* animacao de itens */
-/* transition - propriedade que sera animada tempo de duracao da animacao curva de velocidade */
+/* 
+transition - propriedade que sera animada tempo de duracao da animacao curva de velocidade 
+tipos de velocidades
+ease: Começa devagar, acelera no meio e desacelera no final
+linear: A transição ocorre com uma taxa de mudança constante ao longo do tempo
+ease-in: Começa devagar e acelera no final
+ease-out: Começa rapidamente e desacelera no final
+ease-in-out: Começa devagar, acelera no meio e desacelera no final - transicao uniforme e suave do iicio ao fim
+*/
 
 .item {
     width: 100px;
@@ -111,10 +119,10 @@ h2 ~ p {
 }
 
 /* 
-pseudoclasses
-nesse caso usada para mostrar que a classe item sera animado
-classe:pseudoclasse
-hover - animacao quando o mouse passar sobre o elemento com a classe item
+pseudoclasses - especificam um estado especial do elemento selecionado
+active - aplica estilos quando o elemento esta ativamente selecionado, geralmente quando o botao do mouse e pressionado
+hover - aplica estilos quando o mouse passar sobre o elemento
+focus - aplica estilos quando o elemento esta em foco, geralmente apos ser selecionado com o teclado ou o mouse
 */
 
 .item:hover {
@@ -132,4 +140,40 @@ hover - animacao quando o mouse passar sobre o elemento com a classe item
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* nav - conjunto de links de navegacao */
+
+.barra-nav {
+    width: 700px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 40px;
+}
+
+/* os links que forem filhos de uma nav com a classe barra-nav */
+
+nav.barra-nav > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 100px;
+    height: 45px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #000000;
+    margin: 10px;
+    text-decoration: none;
+    transition: font-size 0.5s ease;
+}
+
+nav.barra-nav > a:hover {
+    background-color: #8eb7df;
+    font-size: 35px;
 }
