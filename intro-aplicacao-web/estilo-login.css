@@ -68,7 +68,6 @@ body {
     width: 50%;
     height: calc(290px - 20px);
     top: 150px;
-    border: 1px solid black;
     box-sizing: border-box;
 }
 
@@ -78,7 +77,6 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: 1px solid black;
     top: 150px;
     font-size: 18px;
     width: 50%;
@@ -129,7 +127,7 @@ div.login-box p {
     bottom: 20px;
 }
 
-.login-box button {
+#criar-conta-login {
     position: relative;
     width: 100px;
     height: 30px;
@@ -144,3 +142,25 @@ div.login-box p {
     font-weight: bold;
 }
 
+#entrar-conta-login {
+    position: relative;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    margin-top: auto;
+    border: none;
+    text-decoration: underline;
+}
+
+#alerta {
+    font-size: 10px;
+    position: absolute;
+    color: #5b1f1f;
+    font-weight: bold;
+    text-decoration: underline;
+    bottom: 55px;
+}
+
+.oculto {
+    display: none;
+}
