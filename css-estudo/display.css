@@ -1,0 +1,55 @@
+
+/* display - propriedade que controla como os elementos interagem uns com os outros no layout da pagina*/
+/* principais valores de display */
+
+/* none - remove completamente o elemento da pagina */
+/* inline - elemento se comporta como parte do conteudo de texto, ocupando somente o espaco necessario */
+/* block - elemento ocupa toda a largura disponivel */
+/* flex - elemento se torna um conteiner flexivel, permitindo um maior controle sobre o layout dos elementos filhos */
+/* grid - elemento se torna um conteiner grid, permitindo criar layouts bidimensionais (linhas e colunas) */
+
+div {
+    display: flex;
+}
+
+
+/* propriedade que podem ser usadas em conjunto com o display flex */
+
+/* flex-direction - define como os itens do conteiner flex sao posicionados - column ou row */
+/* justify-content - alinha os itens ao longo do eixo principal do conteiner flex ou grid */
+/* align-items - alinha os itens ao longo do eixo transversal (secundario) do conteiner flex ou grid */
+
+
+/* valores para justify-content e align-items */
+
+/* start -  alinha os itens no inicio do eixo */
+/* end - alinha os itens no final do eixo */
+/* center - centraliza os itens no eixo */
+/* stretch - estica os itens para preencher o conteiner ao longo do eixo */
+/* left - alinha os itens a esquerda do eixo */
+/* right - alinha os itens a direita do eixo */
+/* safe - combinado com outro valor para garantir que os itens nao sejam cortados ou que saiam do conteiner (overflow) */
+/* space-between - distribui os itens ao longo do eixo de forma que os espacos entre eles sejam iguais */
+/* space-around - distribui os itens ao longo do eixo de forma que os espacos ao redor deles sejam iguais */
+/* space-evenly - distribui os itens ao longo do eixo de forma que o espaco entre eles e nas extremidades sejam iguais */
+
+.container-flex {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+/* propriedade que podem ser usadas em conjunto com o display grid */
+
+/* grid-template-rows - controla a altura das linhas do conteiner grid */
+/* grid-template-columns - controla a largura das colunas do conteiner grid */
+/* gap - define o tamanho do espacamento entre os itens do conteiner grid ou flex */
+
+.container-grid {
+    display: grid;
+    grid-template-rows: 150px 150px; /* duas linhas com 150px de altura cada */
+    grid-template-columns: 1fr 1fr 1fr; /* tres colunas com larguras iguais, ocupando tada a largura do grid */
+    gap: 20px;
+}

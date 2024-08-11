@@ -1,0 +1,32 @@
+
+/* comentario */
+
+/* CSS - (Cascading Style Sheets) - linguagem de estilo utilizada para definir a apresentacao e o layout de paginas web */
+
+
+/* formas de aplicar o css ao documento html */
+
+/* css inline - aplicado diretamente aos elementos html usando o atributo style
+util para estilos especificos que nao precisam ser reutilizados */
+
+/* css interno - inserido dentro da propria pagina html utilizando a tag <style>
+util quando voce deseja aplicar estilos a uma única pagina */
+
+/* css externo - forma mais comum e recomendada
+o css e armazenado em um arquivo separado com extensao .css que e entao vinculado ao arquivo html
+atraves da tag <link> - <link rel="stylesheet" href="estilo.css"> */
+
+
+/* box model - descreve como os elementos html sao renderizados em relacao ao seu conteudo  */
+/* estrutura de todo elemento html */
+/* margin, border, padding e content(conteudo) */
+
+/* padding - espaco entre o contudo e a borda */
+/* border - linha em torno da caixa do conteudo e padding */
+/* margin - espaco entre a borda do elemento e outros elementos ao redor */
+
+div {
+    padding: 20px;
+    border: 2px solid black;
+    margin: 10px;
+}

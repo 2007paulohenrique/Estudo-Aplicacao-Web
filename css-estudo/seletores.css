@@ -1,0 +1,97 @@
+
+/* seletor - usado para identificar quais elementos do html serao estilizados */
+/* tipos mais comuns de seletores */
+
+/* seletor de tipo - seleciona todos os elementos de um tipo especifico */
+p {
+    color: white; /* propriedade - aspecto: valor; */
+}
+
+/* seletor de classe - seleciona todos os elementos que possuem uma classe especifica - "." */
+.classe {
+    color: white;
+}
+
+/* seletor de id - seleciona um unico elemento com um id especifico - "#" */
+#id {
+    color: white;
+}
+
+/* seletor universal - seleciona todos os elementos da pagina - "*" */
+* {
+    color: white;
+}
+
+/* seletor de atributo - seleciona todos os elementos que possuem um determinado atributo ou valor de atributo */
+/* seleciona os inputs com type="text" */
+input[type="text"] {
+    color: white;
+}
+
+/* seleciona os inputs com o atributo required */
+input[required] {
+    color: white;
+}
+
+/* seleciona todas as imagens onde o valor de src termina com .jpg */
+img[src$=".jpg"] {
+    color: white;
+}
+
+/* seleciona todos os links onde o valor de href comeca com https */
+a[href^="https"] {
+    color: white;
+}
+
+/* seleciona todos os links que possuem a palavra exemplo no href */
+a[href*="exemplo"] {
+    color: white;
+}
+
+/* seletore de pseudoclasse - seleciona o elemento quando ele esta em um estado especifico */
+/* quando o mouse passa sobre o elemento */
+a:hover {
+    color: white;
+}
+
+/* quando o elemento esta em foco */
+input:focus {
+    color: white;
+}
+
+/* seletore de pseudoelemento - seleciona partes especifica de um elemento */
+/* insere conteudo antes do conteudo de um elemento */
+p::before {
+    content: ".";
+}
+
+/* insere conteudo apos o conteudo de um elemento */
+p::after {
+    content: ".";
+}
+
+/* estiliza a primeira letra de um elemento de texto */
+p::first-letter {
+    color: white;
+}
+
+/* estiliza a primeira linha de um elemento de bloco de texto */
+p::first-line {
+    color: white;
+}
+
+/* seletor de grupo - seleciona multiplos elementos */
+h1, h2, h3 {
+    color: white;
+}
+
+/* seletores descendentes - seleciona elementos que sao filhos de outro elemento */
+/* seleciona todos os elementos p filhos de div */
+div p {
+    color: white;
+}
+
+/* seletores de filhos diretos - seleciona elementos que sao filhos diretos de outro elemento */
+div > p {
+    color: white;
+}

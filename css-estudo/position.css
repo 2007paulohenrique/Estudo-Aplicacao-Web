@@ -1,0 +1,20 @@
+
+/* position - propriedade que controla como um elemento e posicionado em relacao ao seu conteiner pai e a pagina */
+/* principais valores de position */
+
+/* static - elemento posicionado de acordo com o fluxo do documento (padrao) - top, right, bottom e left nao tem efeito */
+/* relative - elemento posicionado em relacao a sua posicao original no fluxo do documento */
+/* absolute - elemento posicionado em relacao ao conteiner pai mais proximo com o position relative, absolute ou fixed */
+/* fixed - elemento posicionado em relacao a janela de visualizacao (viewport), permanecendo fixo quando a pagina e rolada */
+/* sticky - elemento se comporta como relative ate atingir a posicao definida pelas propriedades top, right, bottom e left, 
+onde então ele se comporta como fixed */
+
+/* top, right, bottom e left - definem a distancia do elemento em relacao as bordas do seu conteiner pai ou do viewport */
+
+div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
