@@ -1,0 +1,77 @@
+
+/* unidades de medida */
+
+/* principais unidades absolutas - unidades fixas */
+
+/* px - pixel - unidade mais comum para medidas, representa um pixel na tela */
+/* cm - centímetro - usado para definir medidas em centimetros */
+/* mm - milímetro - usado para definir medidas em milimetros. */
+
+div {
+    height: 10px;
+}
+
+
+/* principais unidades relativas - unidades relativas ao contexto em que sao usadas */
+
+/* em - relativa ao tamanho da fonte do elemento pai - 1em e igual ao tamanho da fonte atual */
+/* rem - relativa ao tamanho da fonte do elemento raiz (<html>) */
+/* % - relativa ao valor da mesma propriedade do elemento pai */
+/* vw - relativa a largura da viewport - 1vw é igual a 1% da largura da viewport. */
+/* vh - relativa à altura da viewport - 1vh e igual a 1% da altura da viewport */
+
+div {
+    height: 100vh;
+}
+
+
+/* principais unidades de angulo */
+
+/* deg - graus - 360° e uma volta completa */
+/* rad - radianos - 2π radianos e uma volta completa */
+/* turn - voltas - 1 turn e uma volta completa */
+
+div {
+    rotate: 90deg;
+}
+
+
+/* principais unidade de tempo */
+
+/* s - segundo */
+/* ms - milissegundo */
+
+div {
+    transition: 1s;
+}
+
+
+/* unidade flexivel para grid layout */
+
+/* fr - representa uma fracao do espaco disponivel */
+
+.conteiner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colunas com larguras iguais */
+}
+
+
+/* valores especiais - podem ser usados em diversas propriedades para controlar o layout de elementos de forma adaptavel */
+/* tamanho e dimensao */
+
+/* auto - permite ao navegador calcular automaticamente o valor de uma propriedade com base em conteudo e regras de layout */
+/* inherit - herda o valor da propriedade do elemento pai */
+/* fit-content - ajusta o tamanho do elemento ao seu conteudo */
+/* max-content - o maior tamanho que um elemento pode assumir sem quebrar linhas ou colapsar o conteudo */
+/* min-content - o menor tamanho que um elemento pode assumir sem cortar seu conteudo */
+
+div {
+    width: max-content;
+}
+
+
+/* calc() - funcao que permite calculos dinamicos dentro de valores - combina diferentes unidades de medida */
+
+div {
+    width: calc(100% - 10px);
+}

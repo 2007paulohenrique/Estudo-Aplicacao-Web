@@ -1,0 +1,69 @@
+
+/* media queries - tecnica do css usada para aplicar estilos diferentes com base em caracteristicas do dispositivo,
+como largura da tela, resolucao ou orientacao */
+/* essenciais para criar layouts responsivos que se adaptam a diferentes tamanhos de tela */
+
+
+/* media queries baseadas em largura da tela */
+
+/* largura menor que 768px */
+@media (max-width: 768px) {
+    body {
+        background-color: #e0e0e0;
+    }
+    .container {
+        padding: 10px;
+    }
+    .header {
+        font-size: 20px;
+    }
+}
+
+/* largura maior que 768px */
+@media (min-width: 769px) {
+    body {
+        background-color: #ffffff;
+    }
+    .container {
+        padding: 20px;
+    }
+    .header {
+        font-size: 30px;
+    }
+}
+
+
+/* media queries baseadas em resolucao */
+
+/* alta resolucao - dpi alto - alta densidade de pixels */
+@media (min-resolution: 192dpi) {
+    .fundo {
+        background-image: url('alta-resolucao.png');
+    }
+}
+
+/* baixa resolucao - dpi baixo - baixa densidade de pixels */
+@media (max-resolution: 96dpi) {
+    .fundo {
+        background-image: url('baixa-resolucao.png');
+    }
+}
+
+
+/* media queries baseadas em orientacao */
+
+/* orientacao retrato (portrait) */
+@media (orientation: portrait) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* orientacao paisagem (landscape) */
+@media (orientation: landscape) {
+    .container {
+        width: 80%;
+        padding: 20px;
+    }
+}

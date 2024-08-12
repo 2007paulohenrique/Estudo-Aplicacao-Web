@@ -1,0 +1,42 @@
+ 
+/* keyframes - usados para criar animacoes */
+/* definem a sequencia de estados em que um elemento deve passar durante a animacao */
+/* @keyframes nomeDaAnimacao {} */
+
+/* estados - usando "%" */
+/* estados - usando from e to (0% e 100%) */
+
+@keyframes animacao {
+    from { /* estado inicial da animacao */
+        transform: translateX(0); 
+    }
+    to { /* estado final da animacao */
+        transform: translateX(100px);
+    }
+}
+
+@keyframes animacao2 {
+    0% { /* momento da animacao */
+        transform: translateX(0);
+    }
+    50% { 
+        transform: translateX(30px);
+    }
+    100% { 
+        transform: translateX(100px);
+    }
+}
+
+
+/* para aplicar a animacao a um elemento, e usado a propriedade animation */
+/* animation */
+/* animation: nomeDaAnimacao duracao funcao-tempo repeticao; */
+
+/* nomeDaAnimacao - nome da animacao definido no keyframes */
+/* duracao - tempo que a animacao demora para ser finalizada */
+/* funcao-tempo - mesma funcao de tempo das transicoes - mesmos tipos */
+/* repeticao - quantidade de vezes que a animacao se repete - infinite e usado para que a animacao se repita infinitamente */
+
+.elemento-animado {
+    animation: animacao 10s ease infinite;
+}

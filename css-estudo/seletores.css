@@ -1,10 +1,15 @@
 
+/* especificidade - forma como o navegador determina qual regra css aplicar quando ha 
+varias regras que podem se aplicar ao mesmo elemento */
+/* ordem de prioridade - seletor de tipo, classe, id e estilo css inline (atributo style de um elemento no html) */
+
+
 /* seletor - usado para identificar quais elementos do html serao estilizados */
 /* tipos mais comuns de seletores */
 
 /* seletor de tipo - seleciona todos os elementos de um tipo especifico */
 p {
-    color: white; /* propriedade - aspecto: valor; */
+    color: white; 
 }
 
 /* seletor de classe - seleciona todos os elementos que possuem uma classe especifica - "." */
@@ -56,6 +61,11 @@ a:hover {
 
 /* quando o elemento esta em foco */
 input:focus {
+    color: white;
+}
+
+/* quando o elemento esta sendo ativado */
+input:active {
     color: white;
 }
 

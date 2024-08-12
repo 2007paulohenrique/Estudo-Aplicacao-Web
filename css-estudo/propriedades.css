@@ -1,0 +1,165 @@
+
+/* propriedades - caracteristicas especificas podem ser definidas para estilizar os elementos html em uma pagina web*/ 
+/* cada propriedade controla um aspecto particular do estilo de um elemento */
+/* propriedade = aspecto - valor; */
+
+/* lista das propriedades mais comuns */
+
+
+/* cores e fundo */
+
+/* background-color - define a cor de fundo do elemento */
+/* background-image - define uma imagem de fundo para o elemento */
+/* background-repeat - controla se a imagem de fundo deve ser repetida
+  - valores principais - `repeat`, `repeat-x`, `repeat-y`, `no-repeat` */
+/* background-position - define a posicao da imagem de fundo
+  - valores principais - `top left`, `top right`, `bottom left`, `bottom right`, `center` */
+/* background-size - define o tamanho da imagem de fundo
+  - valores principais - `auto`, `cover`, `contain` */
+/* color - define a cor do texto */
+/* opacity - define a opacidade do elemento (transparencia)
+  - valores principais - `0` (totalmente transparente), `1` (totalmente opaco), valores entre `0` e `1` */
+
+
+/* texto e fonte */
+
+/* font-family - define a fonte do texto */
+/* font-size - define o tamanho da fonte do texto */
+/* font-weight - define a espessura da fonte (peso)
+  - valores principais - `normal`, `bold`, `bolder`, `lighter` */
+/* font-style - define o estilo da fonte (normal, italico, obliquo)
+  - valores principais - `normal`, `italic`, `oblique` */
+/* line-height - define a altura da linha do texto */
+/* text-align - define o alinhamento do texto
+  - valores principais - `left`, `right`, `center`, `justify` */
+/* text-decoration - define a decoracao do texto (sublinhado, sobrelinha, etc)
+  - valores principais - `none`, `underline`, `overline`, `line-through` */
+/* text-transform - define a transformacao do texto (maiusculas, minusculas)
+  - valores principais - `none`, `capitalize`, `uppercase`, `lowercase` */
+/* letter-spacing - define o espacamento entre as letras */
+/* word-spacing - define o espacamento entre as palavras */
+/* text-shadow - adiciona uma sombra ao texto */
+
+
+/* layout e posicionamento */
+
+/* display - define como o elemento deve ser exibido
+  - valores principais - `block`, `inline`, `flex`, `grid`, `none` */
+/* position - define o metodo de posicionamento do elemento
+  - valores principais - `static`, `relative`, `absolute`, `fixed`, `sticky` */
+/* top - define a distancia do topo do elemento em relacao ao seu conteiner posicionado */
+/* right - define a distancia da borda direita do elemento em relacao ao seu conteiner posicionado */
+/* bottom - define a distancia da borda inferior do elemento em relacao ao seu conteiner posicionado */
+/* left - define a distancia da borda esquerda do elemento em relacao ao seu conteiner posicionado */
+/* z-index - define a ordem de empilhamento do elemento */
+/* float - define se o elemento deve flutuar a esquerda ou a direita
+  - valores principais - `left`, `right`, `none` */
+/* clear - controla o fluxo de elementos ao redor de elementos flutuantes
+  - valores principais - `none`, `left`, `right`, `both` */
+/* overflow - define como o conteudo que excede o tamanho do elemento deve ser tratado
+  - valores principais - `visible`, `hidden`, `scroll`, `auto` */
+/* visibility - define se o elemento e visivel ou invisivel, mas ainda ocupa espaco
+  - valores principais - `visible`, `hidden` */
+
+
+/* margens e preenchimentos */
+
+/* margin - define o espaco externo ao redor do elemento */
+/* padding - define o espaco interno entre o conteudo e a borda do elemento */
+
+
+/* bordas */
+
+/* border - define a borda do elemento, incluindo largura, estilo e cor
+  - valores principais para estilo - `none`, `solid`, `dashed`, `dotted`, `double`, `groove`, `ridge`, `inset`, `outset` */
+/* border-radius - define o arredondamento dos cantos da borda */
+
+
+/* tamanho e espacamento */
+
+/* width - define a largura do elemento */
+/* height - define a altura do elemento */
+/* max-width - define a largura maxima do elemento */
+/* max-height - define a altura maxima do elemento */
+/* min-width - define a largura minima do elemento */
+/* min-height - define a altura minima do elemento */
+/* box-sizing - define como o tamanho total do elemento e calculado
+  - valores principais - `content-box`, `border-box` */
+/* flex - define como um item flexivel deve crescer ou encolher em um conteiner flexivel */
+/* grid-template-columns - define o tamanho das colunas em um conteiner de grid */
+/* grid-template-rows - define o tamanho das linhas em um conteiner de grid */
+
+
+/* transformacoes e transicoes */
+
+/* transform - define transformacoes 2d ou 3d aplicadas ao elemento
+  - valores principais - `none`, `rotate(45deg)`, `scale(15)`, `translateX(10px)`, `skew(10deg, 20deg)` */
+/* transform-origin - define o ponto de origem para as transformacoes do elemento
+  - valores principais - `center`, `top left`, `top right` */
+/* transition - define a transicao suave entre mudancas de propriedades, incluindo sua duracao, funcao de tempo e atraso
+    - valores principais para funcao de tempo - `linear`, `ease`, `ease-in`, `ease-out`, `ease-in-out` */
+
+
+/* animacoes */
+
+/* animation - define as animacoes que devem ser aplicadas ao elemento, incluindo sua duracao, funcao de tempo e repeticoes
+  - valores principais para funcao de tempo - `linear`, `ease`, `ease-in`, `ease-out`, `ease-in-out` */
+
+
+/* listas */
+
+/* list-style - define o estilo das listas, incluindo o tipo do marcador (se tiver), sua posicao e um marcador imagem (se tiver)  
+  - valores principais para tipo do marcador - `none`, `disc`, `circle`, `square`, `decimal`, `lower-alpha`, `upper-alpha`
+  - valores principais para posicao do marcador - `inside`, `outside` */
+
+
+/* tabelas */
+
+/* border-collapse - define se as bordas das celulas da tabela devem ser colapsadas ou separadas
+  - valores principais - `collapse`, `separate` */
+/* border-spacing - define o espacamento entre as bordas das celulas da tabela */
+/* caption-side - define a posicao da legenda da tabela
+  - valores principais - `top`, `bottom` */
+/* empty-cells - define se as celulas vazias devem ser exibidas ou nao
+  - valores principais - `show`, `hide` */
+/* table-layout - define o layout da tabela
+  - valores principais - `auto`, `fixed` */
+
+
+/* outras */
+
+/* cursor - define o tipo de cursor a ser exibido quando o ponteiro do mouse passa sobre o elemento
+  - valores principais - `auto`, `pointer`, `default`, `text`, `move`, `not-allowed` */
+/* pointer-events - define como o elemento responde a eventos de ponteiro
+  - valores principais - `auto`, `none` */
+/* visibility - define se o elemento e visivel ou invisivel, mas ainda ocupa espaco
+  - valores principais - `visible`, `hidden` */
+/* clip - define a area visivel de um elemento */
+/* user-select - controla se o texto de um elemento pode ser selecionado pelo usuario 
+  - valores principais - `none`, `auto` */
+/* box-shadow - aplica uma sombra ao redor de um elemento, incluindo sua posicao, distancia horizontal, vertical, desfoque e cor
+  - valores principais para posicao - `inset`, `unset` */
+
+
+/* imagens e videos */
+
+/* object-fit - define como o conteudo de uma imagem deve ser redimensionado para se ajustar ao seu conteiner
+  - valores principais - `fill`, `contain`, `cover`, `none`, `scale-down` */
+/* object-position - define a posicao da imagem dentro do conteiner quando o valor de object-fit nao preenche completamente o conteiner
+  - valores principais - `center`, `top`, `bottom`, `left`, `right` */
+
+/* (imagem) filter  - aplica efeitos graficos como desfoque ou alteracao de cores a uma imagem
+  - valores principais - `blur(px)`, `brightness(%)`, `contrast(%)`, `grayscale(%)`, `sepia(%)` */
+
+/* (video) controls - exibe os controles padrao do player de video
+  - valor principal - `controls` */
+/* (video) autoplay - define se o video deve comecar a reproduzir automaticamente
+  - valor principal - `autoplay` */
+/* (video) loop - define se o video deve recomecar automaticamente apos terminar
+  - valor principal - `loop` */
+/* (video) muted - define se o video deve iniciar sem som
+  - valor principal - `muted` */
+/* (video) poster - define uma imagem a ser exibida antes que o video comece a ser reproduzido
+  - valor principal - `url('imagem.png')` */
+/* (video) preload - define se o video deve ser carregado na inicializacao da pagina
+  - valores principais - `auto`, `metadata`, `none` */

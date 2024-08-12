@@ -1,0 +1,51 @@
+
+/* imports - @import - usado para importar folhas de estilo externas para a folha de estilo atual */
+/* permite dividir o css em multiplos arquivos e organiza-lo de maneira mais modular */
+
+/* o @import deve ser colocado no topo da folha de estilo, antes de qualquer outra regra css (exceto comentarios) */
+/* o uso excessivo de @import pode impactar o desempenho do carregamento da pagina */
+
+/* usos comuns */
+
+/* importar estilos externos */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+/* importar estilos com condicionais - estilo deve ser aplicado quando estiver dentro de uma condicao */
+/* screen and (max-width: 600px) - estilo e aplicado quando as telas (screen) dos dispositivos tiverem no maximo 600px de largura */
+@import url("mobile.css") screen and (max-width: 600px);
+
+/* importar estilos locais - quando o css a ser importado esta em um diretorio relativo ao arquivo atual - usar caminho relativo */
+@import url("../styles/exemplo.css"); /* o arquivo nao existe, somente foi usado como exemplo */
+
+
+
+
+
+/* variaveis - define valores reutilizaveis no css - facilita a manutencao e consistencia do codigo */
+/* --nome-da-variavel: valor; */
+/* usadas quando muitas propriedades tiverem valores iguais */
+
+/* sao normalmente definidas dentro do seletor :root e acessadas pela funcao var() */
+/* caso elas sejam definidas dentro do :root, elas podem ser acessadas de forma global */
+
+:root {
+    --cor-padrao: black;
+    --cor-fundo: white;
+}
+
+div {
+    background-color: var(--cor-fundo);
+    color: var(--cor-padrao);
+}
+
+
+/* caso forem definidas dentro de uma classe ou id, elas poderao ser acessadas pelos elementos que tiverem essa classe ou id e  */
+/* pelos seus elementos filhos */
+
+.classe {
+    --cor-preta: black;
+}
+
+.classe p {
+    color: var(--cor-preta);
+}

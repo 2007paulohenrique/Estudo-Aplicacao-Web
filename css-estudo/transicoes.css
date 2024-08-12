@@ -1,0 +1,49 @@
+
+/* transicao - transition - permite a mudanca de um estado de estilo para outro de forma suave */
+/* usadas principalmente em conjunto com pseudoclases para mudar o estilo de um elemento */
+/* propriedade transition - especifica quais propriedades devem ser animadas */
+/* a duração da animacao, a funcao de tempo (cubic-bezier) e o atraso opcional */
+
+/* transition: propriedade duracao funcao-tempo atraso; */
+
+/* propriedade - a propriedade a ser animada */
+/* all - valor para animar todas as propriedades que mudarem */
+
+/* duracao - duracao da animacao */
+
+/* funcao-tempo - define como o tempo da transicao e distribuido */
+/* principais tipos */
+
+/* linear - a transicao ocorre em uma velocidade constante do inicio ao fim */
+/* ease - comeca devagar, acelera no meio e desacelera no final (padrao) */
+/* ease-in - comeca devagar e acelera ao longo da transicao */
+/* ease-out - comeca rapido e desacelera ao final da transicao */
+/* ease-in-out - comeca devagar, acelera no meio e desacelera no final */
+
+/* atraso - tempo antes da transicao comecar (opcinal) */
+  
+button {
+    width: 100px;
+    height: 100px;
+    transition: all 3s ease-in-out 1s;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+
+/* varias transicoes podem ser definidas de uma vez */
+/* separar as transicoes por "," */
+
+button {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    transition: transform 3s ease-in-out 1s, background-color 2s ease-in;
+}
+
+button:hover {
+    transform: scale(1.2);
+    background-color: blue;
+}
