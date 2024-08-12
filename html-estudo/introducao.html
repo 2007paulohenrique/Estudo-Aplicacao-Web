@@ -1,0 +1,104 @@
+<!-- comentario -->
+
+<!--  HTML - HyperText Markup Language (Linguagem de Marcação de Hipertexto) -->
+<!-- linguagem padrao usada para criar e estruturar paginas web -->
+<!-- estruturado por tags -->
+<!-- tags - comandos que delimitam o inicio e o fim de um elemento html - <></> -->
+<!-- elementos - combinam tags de abertura e fechamento com o conteudo entre elas <>conteudo</> -->
+<!-- atributos das tags - fornecem informacoes adicionais sobre o elemento - atributo="valor" -->
+
+<!-- html - versao 5 - HTML5 -->
+
+<!-- tags fundamentais: -->
+<!-- <!DOCTYPE> - <html lang=""> - <head> - <body> - um documento html sempre deve ter essas quatro tags obrigatorias -->
+
+<!DOCTYPE html> <!-- informa ao navegador que este e um documento html5 -->
+
+<html lang="pt-BR"> <!-- elemento raiz, inicio do documento html - lang define o idioma da pagina -->
+
+    <head> <!-- contem metadados sobre o documento, usados para fornecer informacoes sobre a pagina web-->
+
+        <!-- explica o conjunto de caracteres usado no documento -->
+        <meta charset="UTF-8"> 
+
+        <!-- controla como a pagina e exibida em diferentes dispositivos -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- fornece uma breve descricao do conteudo da pagina - a descricao pode ser exibida nos resultados de pesquisa -->
+        <meta name="description" content="Está é uma página web.">
+
+        <!-- lista palavras-chaves associadas ao conteudo da pagina, ajudando no sistema de busca (SEO) -->
+        <meta name="keywords" content="HTML, estudo, SEO, introdução">
+
+        <!-- nome do autor do documento -->
+        <meta name="author" content="Paulo Henrique">
+
+        <!-- icone que sera exibido ao lado do titulo da pagina -->
+        <link rel="icon" href="icone.ico" type="image/x-icon">
+
+        <!-- Open Graph (OG) - usado para integrar paginas web com redes sociais -->
+        <!-- define como o conteudo de uma pagina sera exibido quando compartilhado em redes sociais que suportam o OG -->
+        
+        <meta property="og:title" content="Título da Página">
+        <meta property="og:description" content="Breve Descrição da Página">
+        <meta property="og:image" content="URL da Imagem"> <!-- sera exibida como uma miniatura-->
+        <meta property="og:url" content="URL da Página">
+        <meta property="og:type" content="" > <!-- tipo do conteudo -->
+        <!-- tipos possiveis:
+        website | article | book | profile | music.song | music.album | music.playlist
+        video.movie | video.episode | video.tv_show | video.other | product | event 
+        -->
+        <meta property="og:site_name" content="Nome do Site"> <!-- site onde o conteudo esta armazenado -->
+        
+        <!-- referencia um arquivo externo de css -->
+        <link rel="stylesheet" href="estilo.css">
+         
+        <!-- titulo do documento/pagina -->  
+        <title>Introdução</title>
+
+        <style> /* tag usada no <head> para inserir um estilo css interno para a pagina */
+        </style>
+    </head>
+
+    <body> <!-- coteudo do documento - todo conteudo visivel da pagina -->
+
+        <header> <!-- usado para colocar um cabecalho na pagina -->
+        </header>
+
+        <nav> <!-- uma secao para navegacao, onde ha links para partes da pagina ou para outras paginas -->
+        </nav>
+
+        <main> <!-- conteudo principal da pagina -->
+
+            <section>  <!-- agrupa diferentes partes do conteudo - secao -->
+            </section>
+
+            <!-- atributo class - usado para aplicar estilos css a varios elementos e para os selecionar com JavaScript -->
+            <section class="classe"> 
+            </section>
+
+            <!-- atributo id - usado para identificar um elemento unico na pagina - um id deve ser unico na pagina -->
+            <section id="id">
+            </section>
+
+            <!-- atributo style - usado para aplicar css inline para um unico elemento na pagina -->
+            <section style="color: black;"> 
+            </section>
+        </main>
+        
+        <fotter> <!-- informacoes de rodape, como direitos autorais ou contatos para duvidas -->
+        </fotter>
+
+        <article> <!-- bloco de conteudo que pode ser compreendido de forma independente - tem sentido completo por si so -->
+
+            <aside> <!-- secao de conteudo que esta relacionada ao conteudo ao redor - informacoes complementares/extras -->
+            </aside>
+        </article>
+
+        <div> <!-- bloco de conteudo generico, sem comportamento, normalmente usado em conjunto com classes para sua estilizacao -->
+        </div>
+
+        <!-- referencia um arquivo externo de javascript -->
+        <script src="script.js"></script>
+    </body>
+</html>

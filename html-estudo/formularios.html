@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <style>
+            body {
+                text-align: center;
+                background-color: #000000;
+                font-size: 25px;
+                color: #ffffff;
+            }
+
+            /* 
+            classes
+            - para definir uma classe .nome_classe
+            - usada como atributo em uma tag para estilizar seu conteudo
+            */
+            .destaque {
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- formularios <form> -->
+        <!-- 
+        recebe e repassa os dados do usuario para um servidor web para serem processados,
+        fazendo isso, um outro arquivo com linguagem de programacao podera usar esses dados 
+
+        para usar os dados enviados por um formulário html em um arquivo java, e necessario 
+        criar um servidor web que possa receber as requisições HTTP enviadas pelo formulario e
+        processar os dados nelas contidos
+        -->
+
+        <!-- 
+        atributos (obrigatorios)
+            action = para onde os dados inseridos no formulário serao enviados 
+            method = especifica a forma de envio dos dados para um servidor web, podendo ser do tipo get ou post  
+                get =  envia os dados digitados pela URL - expoe os nomes e os 
+                valores das variaveis pela URL gerada - amplamente utilizado 
+                para solicitacoes de leitura de dados - enviar pouca quantidade de dados - dados nao confidenciais
+                ex de URL gerada - http://www.exemplo.com/pagina?nome=usuario&idade=25
+
+                post = envia os dados digitadas pelo corpo da página - envia os
+                parâmetros no corpo da requisição escondendo eles da URL - amplamente utilizado 
+                para solicitações que envolvem a criação, atualização ou exclusão de dados no servidor - enviar 
+                alta quantidade de dados - dados confidenciais - a URL do navegador nao e alterada
+        -->
+
+        <form action="ArquivoExemploFormulario.java" method="post">
+            <!-- 
+            tags do formulario
+                <input> = campo de dado que o usuario pode escrever
+                <label> = usada para associar um texto a um campo de entrada por um id
+                <select> = usada para mostrar um conjunto de valores para o usuario selecionar
+                <option> = usada no <select> para criar os valores que pertencera ao seu conjunto apresentado ao usuario
+                <textarea> = campo de texto com linhas e colunas
+
+            -->
+
+            <!-- 
+            atributos das tags do formulario
+                type = tipo do campo
+                value = texto que aparecera dentro do campo por padrao
+                name = usado para identificacao do campo qnd os dados sao enviados
+                size = 
+                    caso num <input>, largura do campo
+                    caso num <select>, quantidade de valores que podem ser visualizados ao mesmo tempo
+                maxlength = limite de caracteres
+                for = usado na tag label para colocar o id do campo a ser associado a ela
+                id = identificacao de um elemento dentro da pagina
+                checked = usado nos types checkbox ou radio para marcar um valor por padrao
+                multiple = usado no <select> para permitir varias escolhas
+                rows = usado no <textarea> para definir o numero de linhas
+                cols = usado no <textarea> para definir o numero de colunas
+                placeholder = texto que aparecera num campo antes do usuario inserir um dado
+                min e max = podem ser usados no type range para indicar seu alcance de valores 
+                step = pode ser usado no type range para indicar o quanto de valores se deve pular para ir ao valor seguinte
+            -->
+
+            <!-- 
+            principais types do <input>
+                text: cria uma caixa de texto de uma linha
+                password: oculta os caracteres digitados
+                checkbox: cria uma caixa de seleção que pode ter multiplos valores marcados
+                radio: cria um botao de selecao de uma opcao em um grupo de opcoes, somente uma pode ser selecionada
+                submit: cria um botao que envia os dados do formulario para um servidor
+                image: cria um botao de imagem que envia os dados do formulario para um servidor
+                reset: cria um botao que reseta todos os campos do formulario para seus valores padroes
+                button: cria um botao geralmente usado com JavaScript para realizar acoes
+                file: permite a selecao de arquivos locais para upload, geralmente e necessario usar o atributo 
+                enctype="multipart/form-data" no <form>
+                hidden: valor nao visivel para o usuario, mas enviado com os dados do formulário
+                number: cria uma caixa de texto para numeros, com funcionalidade de validacao numerica
+                date: cria uma caixa de texto para datas, geralmente acompanhada por um seletor de calendario
+                email: cria uma caixa de texto para um endereço de e-mail, com validacao de formato de e-mail
+                tel: cria uma caixa de texto para um numero de telefone, com validacao de formato de numero de telefone
+                url: cria uma caixa de texto para uma URL, com validacao de formato de URL
+                color: permite que os usuarios selecionem uma cor usando uma paleta de cores
+                range: cria um controle deslizante que permite aos usuarios selecionar um valor em uma faixa definida
+                search: cria uma caixa de texto para um texto de pesquisa, muitas vezes estilizada com um ícone de busca
+            -->
+
+            <p> seu nome: <input value="nome" size="30" type="text" name="nome"></p>
+            <p> seu email <input maxlength="256" type="email" name="email"></p>
+            <p> sua senha <input maxlength="20" type="password" name="senha"></p>
+            <p> ja fez o formulario antes? </p>
+            <p>
+                <label for="opcao1"> sim </label>
+                <input type="radio" id="opcao1" name="opcao">
+            </p>
+            <p>
+                <label for="opcao2"> nao </label>
+                <input type="radio" id="opcao2" name="opcao">
+            </p>
+            <p>
+                <p> materias: </p> 
+                apicacao web <input type="checkbox" name="opcao2" value="aplicacaoweb" checked><br> 
+                matematica <input type="checkbox" name="opcao2" value="matematica"><br>
+                portugues <input type="checkbox" name="opcao2" value="portugues"><br>
+                quimica <input type="checkbox" name="opcao2" value="quimica"><br>
+            </p>
+            <p>
+                <select name="periodos1">
+                    <option value="matutino"> matutino </option>
+                    <option value="vespertino"> vespertino </option>
+                    <option value="noturno"> noturno </option>
+                </select>
+            </p>
+            <p>
+                <select name="periodos2" size="3" multiple>
+                    <option value="matutino"> matutino </option>
+                    <option value="vespertino"> vespertino </option>
+                    <option value="noturno"> noturno </option>
+                </select>
+            </p>
+            <p>
+                <textarea rows="10" cols="20" maxlength="200" placeholder="texto"></textarea>
+            </p>
+            <p>
+                volume 
+                <br>
+                0 <input type="range" name="volume" min="0" max="100" value="50" step="2" > 100 
+            </p>
+
+            <!-- <span> = pode ser usado em conjunto com uma classe para estilizar uma parte de um texto -->
+            <p>Este é um exemplo de texto com <span class="destaque">parte destacada</span> usando a tag span</p>
+            
+            <p>
+                porcentagem
+                <br>
+                <input id="porcentagem" type="range" min="0" max="100" value="0"
+                Oninput="getElementById('exibirporcentagem').innerHTML=this.value;">
+                <!-- mudar o valor exibido ao usuario conforme ele desliza a faixa do range -->
+                <span id="exibirporcentagem">100 </span>
+            </p>
+            <input type="reset" value="Limpar">
+            <p><input type="submit" name="enviar" value="enviar"></p>
+        </form>
+    </body>
+</html>
