@@ -8,10 +8,6 @@
         <style>
             @import url(base.css);
 
-            body {
-                margin-top: 3em;
-            }
-
             img, svg, audio, video {
                 margin-bottom: 3em;
             }
@@ -22,6 +18,14 @@
         <header>
             Mídias
         </header>
+
+        <nav>
+            <h3>Navegação:</h3>
+            <a href="estrutura.html">Estrutura</a>
+            <a href="textos-e-links.html">Textos e links</a>
+            <a href="midias.html">Mídias</a>
+            <a href="dados_estruturados.html">Dados estruturados</a>
+        </nav>
 
         <!-- imagens <img> -->
         <!-- boas praticas - otimizar imagens, utilizar formatos como WebP para reduzir o tamanho do arquivo e usar
@@ -153,6 +157,9 @@
 
         <!-- audios <audio> -->
 
+        <!-- obs - o atributo type - melhora a compatibilidade e desempenho do video ou audio na pagina
+        em imagens nao e necessario coloca-lo - o atributo type e da tag <source> -->
+
         <!-- atributo controls - adiciona controles de reproducao do audio na interface do usuario -->
         <h2>Audio com controles</h2>
         <audio controls>
@@ -217,8 +224,9 @@
             Seu navegador não suporta a tag vídeo
         </video>
 
-        <h2>Video em um loop</h2>
-        <video controls loop>
+        <!--  width e height - alteram o tamanho do bloco do video, porem o video mantem suas proporcoes -->
+        <h2>Video em um loop com tamanho alterado</h2>
+        <video controls loop  width="1000" height="760">
             <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
             Seu navegador não suporta a tag vídeo
         </video>
@@ -251,10 +259,11 @@
 
         <!-- <track> - tag dentro de <video> - adiciona faixas de texto ao video, como legendas ou capitulos atraves de um
         arquivo .vtt (WebVTT - Web Video Text Tracks) - arquivo de texto usado para armazenar faixas de texto associadas a video -->
+        <!-- o arquivo legenda_video.vtt em /midias contem a faixa de texto para legendas de um video -->
 
         <!-- obs - o arquivo .srt foi gerado pelo site scriptme.io, logo foi modificado para atender o formato do arquivo .vtt -->
         <!-- obs - os <track>s com kind="captions", kind="descriptions" e kind="chapters" precisariam de uma faixa de texto 
-        diferente da que ja tem neste repositorio, logo nao sao funciionais no video -->
+        diferente da que ja tem neste repositorio, logo nao sao funcionais no video -->
 
         <!-- atributo srclang - linguagem do arquivo de texto -->
         <!-- atributo label - nome que fica visivel ao usuario ao escolher a faixa de legenda -->
@@ -271,29 +280,12 @@
 
         <!-- kind="captions" - fornece legendas para o conteudo do video e descricoes de sons -->
         <!-- para usuarios com deficiencia auditiva -->
-        <h2>Video com legendas e descrição de sons</h2>
-        <video controls>
-            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
-            <track src="../html-estudo/midias/legenda_video.vtt" kind="captions" srclang="pt" label="Português">
-            Seu navegador não suporta a tag vídeo
-        </video>
 
         <!-- kind="descriptions" - fornece descricoes de audio que podem ser lidas por leitores de tela -->
         <!-- para pessoas com deficiencia visual -->
-        <h2>Video com legenda e descrição de audio</h2>
-        <video controls>
-            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
-            <track src="../html-estudo/midias/legenda_video.vtt" kind="descriptions" srclang="pt" label="Português">
-            Seu navegador não suporta a tag vídeo
-        </video>
 
         <!-- kind="chapters" - define pontos especificos no video que podem ser usados como capitulos -->
         <!-- permite que o usuario pule para secoes especificas do video -->
-        <h2>Video com seções</h2>
-        <video controls>
-            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
-            <track src="../html-estudo/midias/legenda_video.vtt" kind="chapters" srclang="pt" label="Capítulos">
-            Seu navegador não suporta a tag vídeo
-        </video>
+        
     </body>
 </html>
