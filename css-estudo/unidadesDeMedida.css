@@ -64,6 +64,7 @@ div {
 /* fit-content - ajusta o tamanho do elemento ao seu conteudo */
 /* max-content - o maior tamanho que um elemento pode assumir sem quebrar linhas ou colapsar o conteudo */
 /* min-content - o menor tamanho que um elemento pode assumir sem cortar seu conteudo */
+/* initial - o valor padrao de uma propriedade */
 
 div {
     width: max-content;

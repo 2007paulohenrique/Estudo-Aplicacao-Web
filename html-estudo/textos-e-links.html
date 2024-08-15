@@ -8,15 +8,8 @@
         <style>
             @import url(base.css);
 
-            body {
-                display: flex;
-                gap: 1em;
-                flex-direction: column; 
-                align-items: center;
-            }
-
-            img {
-                display: block;
+            marquee {
+                text-align: initial;
             }
         </style>
     </head>
@@ -34,108 +27,98 @@
             <a href="dados_estruturados.html">Dados estruturados</a>
         </nav>
         
-        Texto normal
+        <main>
+            Texto normal
 
-        <!-- paragrafos -->
-        <p id="exemplo">Primeiro parágrafo</p>
+            <!-- paragrafos -->
+            <p id="exemplo">Primeiro parágrafo</p>
 
-        <!-- textos em diferentes tamanhos e em negrito -->
-        <h1> Texto muito grande </h1>
-        <h2> Texto grande </h2>
-        <h3> Texto medio </h3>
-        <h4> Texto pequeno </h4>
-        <h5> Texto muito pequeno </h5>
-        <h6> Texto extremamente pequeno </h6>
+            <!-- textos em diferentes tamanhos e em negrito -->
+            <h1> Texto muito grande </h1>
+            <h2> Texto grande </h2>
+            <h3> Texto medio </h3>
+            <h4> Texto pequeno </h4>
+            <h5> Texto muito pequeno </h5>
+            <h6> Texto extremamente pequeno </h6>
 
-        <!-- texto em italico -->
-        <i>Texto em itálico</i>
-        <br> <!-- quebra de linha -->
+            <!-- texto em italico -->
+            <i>Texto em itálico</i>
+            <br> <!-- quebra de linha -->
 
-        <!-- texto sublinahdo -->
-        <u>Texto sublinhado</u>
-        <br>
+            <!-- texto sublinahdo -->
+            <u>Texto sublinhado</u>
 
-        <!-- texto em negrito -->
-        <b>Texto em negrito</b>
-        <br>
+            <!-- texto em negrito -->
+            <b>Texto em negrito</b>
 
-        <!-- texto com formatacao original mantida -->
-        <pre> 
-            <!-- texto de exemplo -->
-Bem-vindo à nossa página web!
-Nossa empresa oferece uma variedade de produtos e serviços para atender às suas necessidades. 
-Desde produtos eletrônicos até soluções de software,
-estamos aqui para ajudar.
-Explore nosso site para descobrir mais sobre o que temos a oferecer. Se tiver alguma dúvida, não hesite em nos contatar.
-Esperamos poder atendê-lo em breve!
-        </pre>
+            <!-- texto com formatacao original mantida -->
+            <pre> 
+                <!-- texto de exemplo -->
+    Bem-vindo à nossa página web!
+    Nossa empresa oferece uma variedade de produtos e serviços para atender às suas necessidades. 
+    Desde produtos eletrônicos até soluções de software,
+    estamos aqui para ajudar.
+    Explore nosso site para descobrir mais sobre o que temos a oferecer. Se tiver alguma dúvida, não hesite em nos contatar.
+    Esperamos poder atendê-lo em breve!
+            </pre>
 
-        <!-- area onde o texto pode se movimentar -->
-        <marquee behavior="alternate" direction="right" height="150" width="max" scrollamount="20">
-            Texto se movendo
-        </marquee>
-        <!-- atributos do <marquee>:
-        direction - direcao do movimento do texto - up, down, left e right
-        behavior - tipo do movimento do texto:
-            scroll - o texto se move de um lado para o outro sem mudar de direcao
-            slide - o texto se move e para quando chega em uma extremidade
-            alternate - o texto vai de um lado para outro alternadamente
-        bgcolor - cor de fundo da area do marquee
-        height - altura da area do marquee - valor max - define o tamanho como o maximo possivel, obedecendo o layout da pagina
-        width - largura da area do marquee - valor max - define o tamanho como o maximo possivel, obedecendo o layout da pagina
-        hspace - espaco horizontal ao redor do marquee
-        vspace - espaco vertical ao redor do marquee 
-        scrollamount - velocidade de movimento do texto - pixels por segundo
-        loop - numero de movimentos - -1 (valor padrao) = infinitos
-        truespeed - presenca de variacao na velocidade do texto:
-            true - velocidade de rolagem constante, independentemente do desempenho do navegador
-            false - velocidade de rolagem ajustada pelo navegador (valor padrao) 
-        -->
+            <!-- area onde o texto pode se movimentar -->
+            <marquee behavior="alternate" direction="right" height="150" width="max" scrollamount="20">
+                Texto se movendo
+            </marquee>
+            <!-- atributos do <marquee>:
+            direction - direcao do movimento do texto - up, down, left e right
+            behavior - tipo do movimento do texto:
+                scroll - o texto se move de um lado para o outro sem mudar de direcao
+                slide - o texto se move e para quando chega em uma extremidade
+                alternate - o texto vai de um lado para outro alternadamente
+            bgcolor - cor de fundo da area do marquee
+            height - altura da area do marquee - valor max - define o tamanho como o maximo possivel, obedecendo o layout da pagina
+            width - largura da area do marquee - valor max - define o tamanho como o maximo possivel, obedecendo o layout da pagina
+            hspace - espaco horizontal ao redor do marquee
+            vspace - espaco vertical ao redor do marquee 
+            scrollamount - velocidade de movimento do texto - pixels por segundo
+            loop - numero de movimentos - -1 (valor padrao) = infinitos
+            truespeed - presenca de variacao na velocidade do texto:
+                true - velocidade de rolagem constante, independentemente do desempenho do navegador
+                false - velocidade de rolagem ajustada pelo navegador (valor padrao) 
+            -->
 
-        <!-- links - <a href="link"></a> -->
+            <!-- links - <a href="link"></a> -->
 
-        <!-- link externo - link para uma pagina externa -->
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">Link externo</a>
-        <br>
-            
-        <!-- link interno - link para um arquivo local -->
-        <a href="estrutura.html">Link interno</a>
-        <br> 
+            <!-- link externo - link para uma pagina externa -->
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">Link externo</a>
+                
+            <!-- link interno - link para um arquivo local -->
+            <a href="estrutura.html">Link interno</a>
 
-        <!-- atributo download - instrui o navegador a baixar o arquivo do link -->
-        <a href="html5.png" download>Download</a>
-        <br>
+            <!-- atributo download - instrui o navegador a baixar o arquivo do link -->
+            <a href="html5.png" download>Download</a>
 
-        <!-- atributo target - especifica onde o link sera aberto -->
+            <!-- atributo target - especifica onde o link sera aberto -->
 
-        <!-- _blank - link e aberto em uma nova aba do navegador -->
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">Blank</a>
-        <br>
+            <!-- _blank - link e aberto em uma nova aba do navegador -->
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">Blank</a>
 
-        <!-- _self - link e aberto na mesma aba onde o link foi clicado (valor padrao) -->
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_self">Self</a> 
-        <br>
+            <!-- _self - link e aberto na mesma aba onde o link foi clicado (valor padrao) -->
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_self">Self</a> 
 
-        <!-- _top - link e aberto na aba inteira, substituindo qualquer quadro ou iframe que possa estar sendo usado -->
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_top">Top</a>
-        <br>
+            <!-- _top - link e aberto na aba inteira, substituindo qualquer quadro ou iframe que possa estar sendo usado -->
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_top">Top</a>
 
-        <!-- _parent - link e aberto no quadro "pai" que esta um nivel acima do quadro em que o link foi clicado -->
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_parent">Parent</a>
-        <br>
+            <!-- _parent - link e aberto no quadro "pai" que esta um nivel acima do quadro em que o link foi clicado -->
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_parent">Parent</a>
 
-        <!-- link em imagem -->
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">
-            <img src="../html-estudo/midias/html5.png">
-        </a>
-        <br>
+            <!-- link em imagem -->
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">
+                <img src="../html-estudo/midias/html5.png">
+            </a>
 
-        <!-- atributo title - mostra informacoes adicionais sobre o link quando ele esta sob o cursor --> 
-        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" title="Titulo do link">Link com titulo</a>
-        <br>
+            <!-- atributo title - mostra informacoes adicionais sobre o link quando ele esta sob o cursor --> 
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" title="Titulo do link">Link com titulo</a>
 
-        <!-- link para um local da pagina - ancoras - usando id de um elemento - #id --> 
-        <a href="#exemplo">Link para um local da página (Primeiro parágrafo)</a>
-        <br>
+            <!-- link para um local da pagina - ancoras - usando id de um elemento - #id --> 
+            <a href="#exemplo">Link para um local da página (Primeiro parágrafo)</a>
+        </main>
     </body>
 </html>
