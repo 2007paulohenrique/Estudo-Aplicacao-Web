@@ -1,0 +1,34 @@
+* {
+    border: 1px solid red;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+html {
+    scroll-padding-top: 75px; 
+}
+
+body {
+    background-color: antiquewhite ;
+    padding-top: 75px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #313131;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-size: 30px;
+}
+
+img {
+    height: 10em;
+}

@@ -139,6 +139,8 @@
   - valores principais - `none`, `auto` */
 /* box-shadow - aplica uma sombra ao redor de um elemento, incluindo sua posicao, distancia horizontal, vertical, desfoque e cor
   - valores principais para posicao - `inset`, `unset` */
+/* scroll-padding - ajusta o espaco que o navegador considera ao calcular a posicao do conteúdo durante a rolagem util
+para garantir que o conteudo visivel nao seja coberto por elementos fixos no topo da pagina */
 
 
 /* imagens e videos */

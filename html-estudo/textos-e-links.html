@@ -4,9 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Textos e Links</title>
+
+        <style>
+            @import url(base.css);
+
+            body {
+                display: flex;
+                gap: 1em;
+                flex-direction: column; 
+                align-items: center;
+                margin-top: 3em;
+            }
+
+            img {
+                display: block;
+            }
+        </style>
     </head>
 
-    <body style="display: flex; flex-direction: column; align-items: center;">
+    <body>
+        <header>
+            Textos e Links
+        </header>
+
         Texto normal
 
         <!-- paragrafos -->
@@ -44,7 +64,7 @@ Esperamos poder atendê-lo em breve!
         </pre>
 
         <!-- area onde o texto pode se movimentar -->
-        <marquee behavior="alternate" direction="right" height="150" width="max" scrollamount="20" bgcolor="lightblue">
+        <marquee behavior="alternate" direction="right" height="150" width="max" scrollamount="20">
             Texto se movendo
         </marquee>
         <!-- atributos do <marquee>:
@@ -72,7 +92,7 @@ Esperamos poder atendê-lo em breve!
         <br>
             
         <!-- link interno - link para um arquivo local -->
-        <a href="introducao.html">Link interno</a>
+        <a href="estrutura.html">Link interno</a>
         <br> 
 
         <!-- atributo download - instrui o navegador a baixar o arquivo do link -->
@@ -99,7 +119,7 @@ Esperamos poder atendê-lo em breve!
 
         <!-- link em imagem -->
         <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">
-            <img src="html5.png">
+            <img src="../html-estudo/midias/html5.png">
         </a>
         <br>
 
@@ -108,7 +128,7 @@ Esperamos poder atendê-lo em breve!
         <br>
 
         <!-- link para um local da pagina - ancoras - usando id de um elemento - #id --> 
-        <a href="#exemplo">Link para um local da página</a>
+        <a href="#exemplo">Link para um local da página (Primeiro parágrafo)</a>
         <br>
     </body>
 </html>

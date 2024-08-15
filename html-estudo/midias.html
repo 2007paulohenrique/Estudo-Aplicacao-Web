@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mídias</title>
+
+        <style>
+            @import url(base.css);
+
+            body {
+                margin-top: 3em;
+            }
+
+            img, svg, audio, video {
+                margin-bottom: 3em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            Mídias
+        </header>
+
+        <!-- imagens <img> -->
+        <!-- boas praticas - otimizar imagens, utilizar formatos como WebP para reduzir o tamanho do arquivo e usar
+        o atributo alt -->
+
+        <!-- formatos de imagem:
+        JPEG (.jpg, .jpeg) - bom para fotografias e imagens com muitos detalhes
+        PNG (.png) - suporta transparencia e e ideal para graficos e logotipos
+        GIF (.gif) - suporta animacoes simples
+        SVG (.svg) - bons para icones e logotipos que precisam ser redimensionados sem perder qualidade
+        WebP (.webp) - formato moderno que oferece alta compressao com qualidade
+        -->
+
+        <!-- src="caminho para a imagem" -->
+        <h2>Imagem com caminho relativo</h2>
+        <img src="../html-estudo/midias/html5.png"> 
+
+        <!-- src="url completa da imagem" -->
+        <h2>Imagem com caminho absoluto</h2>
+        <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/html_plain_wordmark_logo_icon_146476.png" alt="Imagem HTML5">
+
+        <!-- atributo alt - texto descritivo caso a imagem nao carregue -->
+        <h2>Imagem não carregada</h2>
+        <img src="html5comcaminhonaoexistente.png" alt="Imagem HTML5"> 
+
+        <!-- atributos height e width - altura e largura da imagem - nao funcionam caso esses atributos forem estilizados -->
+        <!-- obs - height ja esta estilizado, por isso nao ira se alterar -->
+        <h2>Imagem com tamanho alterado</h2>
+        <img src="../html-estudo/midias/html5.png" alt="Imagem HTML5" width="250" height="50"> 
+
+        <!-- atributo title - texto que e mostrado sobre a imagem quando ela esta sob o cursor --> 
+        <h2>Imagem com titulo</h2>
+        <img src="../html-estudo/midias/html5.png" alt="Imagem HTML5" title="Título da imagem">
+
+        <!-- atributo loading - define como a imagem sera carregada --> 
+        <!-- loading="lazy" - imagem sera carregada somente quando estiver visivel no viewport -->
+        <h2>Imagem carregada no viewport</h2>
+        <img src="../html-estudo/midias/html5.png" alt="Imagem HTML5" loading="lazy">
+
+        <!-- loading="eager" - carregamento imediato -->
+        <h2>Imagem carregada imediatamente</h2>
+        <img src="../html-estudo/midias/html5.png" alt="Imagem HTML5" loading="eager">
+
+        <!-- <figure> - utilizado para agrupar imagem e sua legenda num unico bloco -->
+        <h2>Imagem com descricao agrupada</h2>
+        <figure>
+            <figcaption>Descricao da imagem</figcaption>
+            <img src="../html-estudo/midias/html5.png" alt="Imagem HTML5">
+        </figure>
+
+        <!-- <svg> - (Scalable Vector Graphics) - utilizado para criar imagens definidas por formas geometricas -->
+        <!-- width e height - definem o tamanho do svg -->
+
+        <!-- atributos das formas:
+        fill - cor de preenchimento
+        stroke - cor do contorno
+        stroke-width - largura do contorno
+        -->
+
+        <!-- <rect> - retangulos e quadrados -->
+        <h2>SVG para retangulos e quadrados</h2>
+        <svg width="200" height="200">
+            <!-- atributos do rect:
+            x e y - coordenada x e y do canto superior esquerdo da forma
+            width e height - largura e altura do retangulo
+            rx e ry - raio de arredondamento dos cantos (opcional)
+            -->
+            <rect x="10" y="10" width="180" height="50" stroke="black" stroke-width="1" fill="gray"/>
+            <rect x="30" y="70" width="140" height="70" rx="20" ry="10" stroke="black" stroke-width="3" fill="red"/>
+        </svg>
+
+        <!-- <circle> - circulos -->
+        <h2>SVG para círculos</h2>
+        <svg width="200" height="200">
+            <!-- atributos do circle:
+            cx e cy - coordenada x e y do centro do circulo
+            r - raio
+            -->
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+            <circle cx="150" cy="150" r="40" stroke="purple" stroke-width="10" fill="white" />
+        </svg>
+
+        <!-- <ellipse> - elipses -->
+        <h2>SVG para elipses</h2>
+        <svg width="200" height="200">
+            <!-- atributos do ellipse:
+            cx e cy - coordenada x e y do centro da elipse
+            rx e ry - raio horizontal e vertical da elipse
+            -->
+            <ellipse cx="50" cy="50" rx="30" ry="40" stroke="gray" stroke-width="5" fill="black" />
+            <ellipse cx="150" cy="150" rx="45" ry="20" stroke="black" stroke-width="1" fill="gray" />
+        </svg>
+
+        <!-- <line> - linhas -->
+        <h2>SVG para linhas</h2>
+        <svg width="200" height="200">
+            <!-- atributos do line:
+            x1 e y1 - coordenada x e y do ponto inicial
+            x2 e y2 - coordenada x e y do ponto final
+            -->
+            <line x1="10" y1="10" x2="190" y2="190" stroke="black" stroke-width="2"/>        
+            <line x1="190" y1="10" x2="20" y2="120" stroke="blue" stroke-width="6"/>        
+        </svg>
+
+        <!-- <polygon> - poligonos -->
+        <h2>SVG para polígonos</h2>
+        <svg width="200" height="200">
+            <!-- atributos do polygon:
+            points - lista de coordenadas x,y para os pontos do poligono
+            -->
+            <!-- obs - o ponto na coordenada final forma uma linha com o ponto na coordenada inicial -->
+            <polygon points="60,10 110,40 110,80 60,110 10,80 10,40" fill="purple" stroke="black"/>    
+            <polygon points="130,190, 160,90 190,190" fill="darkblue" stroke="black"/>
+        </svg>
+
+        <!-- <polyline> - linhas conectadas -->
+        <h2>SVG para várias linhas conectadas</h2>
+        <svg width="200" height="200">
+            <!-- atributos do polyline:
+            points - lista de coordenadas x,y para os pontos das linhas
+            -->
+            <!-- obs - o ponto na coordenada final nao forma uma linha com o ponto na coordenada inicial -->
+            <polyline points="10,10 10,50 40,50 40,120 120,120 190,120, 190,190" fill="none" stroke="darkorange" stroke-width="3"/>
+        </svg>
+
+        <!-- obs - ha outra forma com comandos mais complexos do svg - <path> - nao foi listado -->
+        
+        <br>
+
+        <!-- audios <audio> -->
+
+        <!-- atributo controls - adiciona controles de reproducao do audio na interface do usuario -->
+        <h2>Audio com controles</h2>
+        <audio controls>
+            <source src="../html-estudo/midias/audio_html_tag_video.mp3" type="audio/mp3">
+        </audio>
+        
+        <!-- atributo autoplay - inicia o audio automaticamente quando a pagina e carregada -->
+        <!-- atributo muted - inicia o audio sem som -->
+        <h2>Audio mutado com autoplay</h2>
+        <audio controls autoplay muted>
+            <source src="../html-estudo/midias/audio_html_tag_video.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- atributo loop - reproduz o audio em um loop infinito -->
+        <h2>Audio em um loop</h2>
+        <audio controls loop>
+            <source src="../html-estudo/midias/audio_html_tag_video.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- atributo preload - sugere ao navegador como carregar o audio -->
+        
+        <!-- preload="auto" - o audio e carregado assim que a pagina carrega -->
+        <h2>Audio carregado com a pagina</h2>
+        <audio controls preload="auto">
+            <source src="../html-estudo/midias/audio_html_tag_video.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- preload="metadata" - somente os metadados sao carregados (duracao, etc) -->
+        <h2>Audio com metadados carregados</h2>
+        <audio controls preload="metadata">
+            <source src="../html-estudo/midias/audio_html_tag_video.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- preload="none" - o audio e carregado assim que ele for reproduzido -->
+        <h2>Audio carregado com a reproducao</h2>
+        <audio controls preload="none">
+            <source src="../html-estudo/midias/audio_html_tag_video.mp3" type="audio/mp3">
+        </audio>
+
+        <br>
+
+        <!-- videos <video> -->
+        <!-- boas praticas - adicionar uma mensagem dentro da tag <video> caso o navegador nao suporte essa tag -->
+
+        <!-- formatos de video:
+        MP4 (.mp4) - amplamente suportado, especialmente com o codec H.264
+        WebM (.webm) - ideal para videos na web, usando o codec VP8/VP9
+        Ogg (.ogg) - usa o codec Theora, mas tem suporte limitado
+        -->
+
+        <!-- obs - os atributos controls, autoplay, muted, loop e preload funcionam para <video> da mesma forma que para <img> -->
+
+        <h2>Video com controles</h2>
+        <video controls>
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            Seu navegador não suporta a tag vídeo
+        </video>
+
+        <h2>Video mutado com autoplay</h2>
+        <video controls autoplay muted>
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            Seu navegador não suporta a tag vídeo
+        </video>
+
+        <h2>Video em um loop</h2>
+        <video controls loop>
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            Seu navegador não suporta a tag vídeo
+        </video>
+        
+        <!-- preload="auto" - o navegador decide como carregar o video -->
+        <h2>Video carregado pelo navegador</h2>
+        <video controls preload="auto">
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            Seu navegador não suporta a tag vídeo
+        </video>
+
+        <h2>Video com metadados carregados</h2>
+        <video controls preload="metadata">
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            Seu navegador não suporta a tag vídeo
+        </video>
+
+        <h2>Video carregado com a reproducao</h2>
+        <video controls preload="none">
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            Seu navegador não suporta a tag vídeo
+        </video>
+
+        <!-- atributo poster - define uma imagem de capa para o video -->
+        <h2>Video com capa</h2>
+        <video controls poster="../html-estudo/midias/html5.png">
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            Seu navegador não suporta a tag vídeo
+        </video>
+
+        <!-- <track> - tag dentro de <video> - adiciona faixas de texto ao video, como legendas ou capitulos atraves de um
+        arquivo .vtt (WebVTT - Web Video Text Tracks) - arquivo de texto usado para armazenar faixas de texto associadas a video -->
+
+        <!-- obs - o arquivo .srt foi gerado pelo site scriptme.io, logo foi modificado para atender o formato do arquivo .vtt -->
+        <!-- obs - os <track>s com kind="captions", kind="descriptions" e kind="chapters" precisariam de uma faixa de texto 
+        diferente da que ja tem neste repositorio, logo nao sao funciionais no video -->
+
+        <!-- atributo srclang - linguagem do arquivo de texto -->
+        <!-- atributo label - nome que fica visivel ao usuario ao escolher a faixa de legenda -->
+        <!-- atributo kind - define o tipo da faixa de texto - para cada kind, o arquivo .vtt deve seguir um formato diferente -->
+
+        <!-- kind="subtitles" - fornece legendas para o conteudo do video -->
+        <!-- para usuarios que nao entendem o idioma do video -->
+        <h2>Video com legenda</h2>
+        <video controls>
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            <track src="../html-estudo/midias/legenda_video.vtt" kind="subtitles" srclang="pt" label="Português">
+            Seu navegador não suporta a tag vídeo
+        </video>
+
+        <!-- kind="captions" - fornece legendas para o conteudo do video e descricoes de sons -->
+        <!-- para usuarios com deficiencia auditiva -->
+        <h2>Video com legendas e descrição de sons</h2>
+        <video controls>
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            <track src="../html-estudo/midias/legenda_video.vtt" kind="captions" srclang="pt" label="Português">
+            Seu navegador não suporta a tag vídeo
+        </video>
+
+        <!-- kind="descriptions" - fornece descricoes de audio que podem ser lidas por leitores de tela -->
+        <!-- para pessoas com deficiencia visual -->
+        <h2>Video com legenda e descrição de audio</h2>
+        <video controls>
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            <track src="../html-estudo/midias/legenda_video.vtt" kind="descriptions" srclang="pt" label="Português">
+            Seu navegador não suporta a tag vídeo
+        </video>
+
+        <!-- kind="chapters" - define pontos especificos no video que podem ser usados como capitulos -->
+        <!-- permite que o usuario pule para secoes especificas do video -->
+        <h2>Video com seções</h2>
+        <video controls>
+            <source src="../html-estudo/midias/video_html_tag_video.mp4" type="video/mp4">
+            <track src="../html-estudo/midias/legenda_video.vtt" kind="chapters" srclang="pt" label="Capítulos">
+            Seu navegador não suporta a tag vídeo
+        </video>
+    </body>
+</html>

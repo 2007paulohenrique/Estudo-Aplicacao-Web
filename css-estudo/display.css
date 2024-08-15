@@ -3,8 +3,8 @@
 /* principais valores de display */
 
 /* none - remove completamente o elemento da pagina */
-/* inline - elemento se comporta como parte do conteudo de texto, ocupando somente o espaco necessario */
-/* block - elemento ocupa toda a largura disponivel */
+/* inline - elemento se comporta como parte do conteudo de texto, ocupando somente o espaco necessario, podendo criar espacos em branco  */
+/* block - elemento ocupa toda a largura disponivel, sem criar espacos em branco ao seu redor */
 /* flex - elemento se torna um conteiner flexivel, permitindo um maior controle sobre o layout dos elementos filhos */
 /* grid - elemento se torna um conteiner grid, permitindo criar layouts bidimensionais (linhas e colunas) */
 
