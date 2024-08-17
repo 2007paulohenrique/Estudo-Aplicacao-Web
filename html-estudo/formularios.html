@@ -120,140 +120,221 @@
                 </datalist>
 
                 <!-- meter - valor representado pelo preenchimento de uma faixa com tamanho especifico  -->
-                <!-- elemento nao interativo - min e max - tamanho da faixa - value - valor a ser representado  -->
+                <!-- elemento nao interativo - value - valor a ser representado  -->
                 <!-- usado para representar coisas como bateria ou a quantidade de armazenamento usado por um usuario -->
                 <h3>Faixa de valor</h3>
                 <meter value="4" min="0" max="10"></meter>
-            </form>
 
-            <!-- atributos de evento comuns para formularios e seus elementos:
-            onsubmit - evento executado quando o formulario e enviado
-            onreset - evento executado quando o formulario e resetado
-            oninput - evento executado quando algum campo de entrada e alterado
-            onchange - evento executado quando algum campo de entrada e alterado e o campo perde o foco
-            onclick - evento executado quando um elemento e clicado
-            onfocus - evento executado quando um elemento ganha foco
-            onblur - evento executado quando um elemento perde o foco
-            onmouseenter - evento executado quando o cursor do mouse entra na area de um elemento
-            onmouseleave - evento executado quando o cursor do mouse sai da area de um elemento
-            -->
-
-            <!-- no formulario abaixo, ha um evento no formulario que e ativado quando um campo de entrada e alterado, isso
-            para mostrar o funcionamento de uma tag de <form>, o <output> -->
-            <form action="/destino" method="post" name="form2" autocomplete="off" oninput="resultado.value=parseInt(a.value)">
                 <!-- output - valor resultante de um calculo ou acao feita em um formulario -->
                 <!-- pode ser usado com javascript ou para mostrar um valor de um elemento que nao tem o valor explicitado -->
                 <!-- deve estar associado a elementos que o usuario possa interajir - associacao - for(output) = id(elementos) -->
                 <h3>Resultado dinâmico</h3>
-                <input value="0" type="range" id="a">
+                <input value="0" type="range" id="a" oninput="resultado.value=parseInt(a.value)">
                 <output name="resultado" for="a"></output>
+
+                <!-- progress - barra de progresso usada para indicatr o andamento de uma operacao -->
+                <h3>Barra de progresso</h3>
+                <progress value="70" max="100"></progress>
+
+                <!-- atributos de evento comuns para formularios e seus elementos:
+                onsubmit - evento executado quando o formulario e enviado
+                onreset - evento executado quando o formulario e resetado
+                oninput - evento executado quando algum campo de entrada e alterado
+                onchange - evento executado quando algum campo de entrada e alterado e o campo perde o foco
+                onclick - evento executado quando um elemento e clicado
+                onfocus - evento executado quando um elemento ganha foco
+                onblur - evento executado quando um elemento perde o foco
+                onmouseenter - evento executado quando o cursor do mouse entra na area de um elemento
+                onmouseleave - evento executado quando o cursor do mouse sai da area de um elemento
+                -->
             </form>
 
+            <form action="/destino" method="post" name="form2" autocomplete="off">
+                <!-- principais atributos comuns para os elementos do formulario:
+                name - nome do campo, usado para identifica-lo quando os dados do formulario sao enviados ao servidor
+                sem o nome, o valor do campo nao sera incluido na solicitacao do formulario, tornando-o essencial
+
+                id - identificador de um elemento, unico na pagina, alem de servir para a estilizacao de elementos, e usado
+                para associar outros elementos da pagina a ele, como label ou output
+
+                value - define o valor inicial e padrao de um campo de entrada ou botao, tambem usado em caixas de selecao 
+                para atribuir um valor a elas
+
+                type - define o tipo do campo de entrada ou botao
+
+                required - torna um campo obrigatorio
+                -->
+
+                <!-- tipos de campo de entrada -->
+                <h3>Campo de entrada</h3>
+                <input type="text" name="nome" id="nome" value="nome">
+                
+                <!-- tipos de campo de entrada <input> -->
+                
+                <!-- text - caixa de texto de uma linha -->
+                <h3>Texto</h3>
+                <input type="text" name="texto" id="texto">
+                
+                <!-- email - caixa de texto para um endereco de email, com validacao de formato -->
+                <h3>Email</h3>
+                <input type="email" name="email" id="email">
+
+                <!-- password - caixa de texto com caracteres ocultados -->
+                <h3>Senha</h3>
+                <input type="password" name="senha" id="senha">
+
+                <!-- checkbox - caixa de selecao que pode ter multiplos valores marcados -->
+                <h3>Caixa de múltiplas seleções</h3>
+                <input type="checkbox" name="cb" id="cb">
+                <input type="checkbox" name="cb" id="cb">
+                <input type="checkbox" name="cb" id="cb">
+
+                <!-- radio - botao de selecao de uma opcao em um grupo de opcoes, somente uma pode ser selecionada -->
+                <h3>Caixa de seleção</h3>
+                <input type="radio" name="radio" id="radio">
+                <input type="radio" name="radio" id="radio">
+                <input type="radio" name="radio" id="radio">
+
+                <!-- number - caixa para valor numerico, com validacao de formato -->
+                <h3>Número</h3>
+                <input type="number" name="numero" id="numero">
+
+                <!-- tel - caixa para numeros de telefone, sem validacao, porem o navegador pode oferecer uma interface apropriada
+                para a insercao de numeros telefonicos -->
+                <h3>Telefone</h3>
+                <input type="tel" name="tel" id="tel">
+
+                <!-- url - caixa para url, com validacao de formato -->
+                <h3>URL</h3>
+                <input type="url" name="url" id="url">
+
+                <!-- color - paleta de cores para uma unica selecao -->
+                <h3>Cor</h3>
+                <input type="color" name="cor" id="cor">
+
+                <!-- range - controle deslizante que permite a selecao de um valor em uma faixa definida -->
+                <h3>Faixa</h3>
+                <input type="range" name="faixa" id="faixa" min="0" max="5">
+
+                <!-- date e datetime-local - caixa para data, e data e hora, com o navegador fornecendo um seletor de calendario -->
+                <h3>Data</h3>
+                <input type="date" name="data" id="data">
+
+                <h3>Data e hora</h3>
+                <input type="datetime-local" name="datahora" id="datahora">
+
+                <!-- file - campo para a selecao de arquivos para upload -->
+                <!-- o atributo enctype="multipart/form-data" do <form> precisa estar presente quando a um campo do tipo file,
+                para que o arquivo seja enviado corretamente -->
+                <h3>Arquivo</h3>
+                <input type="file" name="arquivo" id="arquivo">
+
+                <!-- hidden - campo nao visivel, usado para enviar dados com o formulario, como 
+                ids de sessao e tokens de autenticacao  -->
+                <input type="hidden" name="hdd" id="hdd">
+
+                <!-- search - campo para textos usados em buscas -->
+                <h3>Campo de procura</h3>
+                <input type="search" name="procura" id="procura">
+
+                <!-- tipos de botoes -->
+
+                <!-- submit - botao de envio do formulario -->
+                <h3>Enviar formulário</h3>
+                <button type="submit">Enviar</button>
+
+                <!-- reset - botao que reseta os campos do formulario -->
+                <h3>Resetar formulário</h3>
+                <button type="reset">Resetar</button>
+                
+                <!-- button - botao generico -->
+                <h3>Botão genérico</h3>
+                <button type="button">Botão</button>
+            </form>
 
             <form action="/destino" method="post" name="form3" autocomplete="off">
-                <!-- principais atributos comuns para os elementos do formulario:
-                    name - nome do campo, usado para identifica-lo quando os dados do formulario sao enviados ao servidor
-                    sem o nome, o valor do campo nao sera incluido na solicitacao do formulario, tornando-o essencial
+                <!-- atributos dos elementos do <form> -->
 
-                    id - identificador de um elemento, unico na pagina, alem de servir para a estilizacao de elementos, e usado
-                    para associar outros elementos da pagina a ele, como label ou output
+                <!-- placeholder - texto que aparece dentro de um campo de texto como sugestao -->
+                <h3>placeholder</h3>
+                <input type="text" name="ph" id="ph" placeholder="sugestao">
 
-                    value - define o valor inicial e padrao de um campo de entrada ou botao
+                <!-- readonly - torna o campo nao editavel -->
+                <h3>readonly</h3>
+                <input type="text" name="ro" id="ro" readonly>
 
-                    type - define o tipo do campo de entrada ou botao
-                -->
-                
-                <!-- 
-                atributos das tags do formulario
-                 
-                    size = 
-                        caso num <input>, largura do campo
-                        caso num <select>, quantidade de valores que podem ser visualizados ao mesmo tempo
-                    maxlength = limite de caracteres
-                    checked = usado nos types checkbox ou radio para marcar um valor por padrao
-                    multiple = usado no <select> para permitir varias escolhas
-                    rows = usado no <textarea> para definir o numero de linhas
-                    cols = usado no <textarea> para definir o numero de colunas
-                    placeholder = texto que aparecera num campo antes do usuario inserir um dado
-                    step = pode ser usado no type range para indicar o quanto de valores se deve pular para ir ao valor seguinte
-                -->
+                <!-- disabled - desabilita o campo, tornando-o nao interativo -->
+                <h3>disabled</h3>
+                <input type="text" name="db" id="db" disabled>
+            
+                <!-- maxlength - numero maximo de caracteres que um campo de texto pode aceitar -->
+                <h3>maxlength</h3>
+                <input type="text" name="ml" id="ml" maxlength="10">
 
-                <!-- 
-                principais types do <input>
-                    text: cria uma caixa de texto de uma linha
-                    password: oculta os caracteres digitados
-                    checkbox: cria uma caixa de seleção que pode ter multiplos valores marcados
-                    radio: cria um botao de selecao de uma opcao em um grupo de opcoes, somente uma pode ser selecionada
-                    submit: cria um botao que envia os dados do formulario para um servidor
-                    image: cria um botao de imagem que envia os dados do formulario para um servidor
-                    reset: cria um botao que reseta todos os campos do formulario para seus valores padroes
-                    button: cria um botao geralmente usado com JavaScript para realizar acoes
-                    file: permite a selecao de arquivos locais para upload, geralmente e necessario usar o atributo 
-                    enctype="multipart/form-data" no <form>
-                    hidden: valor nao visivel para o usuario, mas enviado com os dados do formulário
-                    number: cria uma caixa de texto para numeros, com funcionalidade de validacao numerica
-                    date: cria uma caixa de texto para datas, geralmente acompanhada por um seletor de calendario
-                    email: cria uma caixa de texto para um endereço de e-mail, com validacao de formato de e-mail
-                    tel: cria uma caixa de texto para um numero de telefone, com validacao de formato de numero de telefone
-                    url: cria uma caixa de texto para uma URL, com validacao de formato de URL
-                    color: permite que os usuarios selecionem uma cor usando uma paleta de cores
-                    range: cria um controle deslizante que permite aos usuarios selecionar um valor em uma faixa definida
-                    search: cria uma caixa de texto para um texto de pesquisa, muitas vezes estilizada com um ícone de busca
-                -->
+                <!-- min e max - valor minimo e maximo para campos numericos, datas e faixas de valores -->
+                <h3>min e max</h3>
+                <input type="number" name="mmn" id="mmn" min="1" max="100">
+                <input type="date" name="mmd" id="mmd" min="2024-08-01" max="2024-08-31">
+                <input type="range" name="mmr" id="mmr" min="1" max="7">
 
-                <p> seu nome: <input value="nome" size="30" type="text" name="nome"></p>
-                <p> seu email <input maxlength="256" type="email" name="email"></p>
-                <p> sua senha <input maxlength="20" type="password" name="senha"></p>
-                <p> ja fez o formulario antes? </p>
-                <p>
-                    <label for="opcao1"> sim </label>
-                    <input type="radio" id="opcao1" name="opcao">
-                </p>
-                <p>
-                    <label for="opcao2"> nao </label>
-                    <input type="radio" id="opcao2" name="opcao">
-                </p>
-                <p>
-                    <p> materias: </p> 
-                    apicacao web <input type="checkbox" name="opcao2" value="aplicacaoweb" checked><br> 
-                    matematica <input type="checkbox" name="opcao2" value="matematica"><br>
-                    portugues <input type="checkbox" name="opcao2" value="portugues"><br>
-                    quimica <input type="checkbox" name="opcao2" value="quimica"><br>
-                </p>
-                <p>
-                    <select name="periodos1">
-                        <option value="matutino"> matutino </option>
-                        <option value="vespertino"> vespertino </option>
-                        <option value="noturno"> noturno </option>
-                    </select>
-                </p>
-                <p>
-                    <select name="periodos2" size="3" multiple>
-                        <option value="matutino"> matutino </option>
-                        <option value="vespertino"> vespertino </option>
-                        <option value="noturno"> noturno </option>
-                    </select>
-                </p>
-                <p>
-                    <textarea rows="10" cols="20" maxlength="200" placeholder="texto"></textarea>
-                </p>
-                <p>
-                    volume 
-                    <br>
-                    0 <input type="range" name="volume" min="0" max="100" value="50" step="2" > 100 
-                </p>
+                <!-- step - intervalos de valores para campos numericos e faixas de valores -->
+                <h3>step</h3>
+                <input type="range" name="str" id="str" step="25">
+                <input type="number" name="stn" id="stn" step="10">
 
-                
-                <p>
-                    porcentagem
-                    <br>
-                    <input id="porcentagem" type="range" min="0" max="100" value="0"
-                    Oninput="getElementById('exibirporcentagem').innerHTML=this.value;">
-                    <!-- mudar o valor exibido ao usuario conforme ele desliza a faixa do range -->
-                    <span id="exibirporcentagem">100 </span>
-                </p>
-                <input type="reset" value="Limpar">
-                <p><input type="submit" name="enviar" value="enviar"></p>
+                <!-- autofocus - da foco ao campo automaticamente ao carregar a pagina -->
+                <h3>autofocus</h3>
+                <input type="text" name="af" id="af" autofocus>
+
+                <!-- autocapitalize - usado em elementos de entrada de texto para controlar como a capitalizacao automatica
+                deve ser tratada pelo navegador em dispositivos que oferecem suporte, como smartphones e tablets -->
+                <h3>autocapitalize</h3>
+                <input type="text" name="af" id="af" autocapitalize="words">
+
+                <!-- rows e cols - linhas e colunas visiveis em um <textarea> -->
+                <h3>rows e cols</h3>
+                <textarea name="rc" id="rc" rows="5" cols="10"></textarea>
+
+                <!-- size - numero de opcoes visiveis em um <select> -->
+                <h3>size</h3>
+                <select name="sz" id="sz" size="3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <!-- multiple - permite a selecao de varias opcoes do <select> -->
+                <h3>multiple</h3>
+                <select name="mtp" id="mlt" multiple>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <!-- selected - seleciona uma opcao do <select> por padrao -->
+                <!-- disabled - desabilita uma opcao -->
+                <h3>selected</h3>
+                <select name="st" id="st">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" disabled>3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                </select>
+
+                <!-- checked - usada para marcar uma caixa por padrao em um campo do typo checkbox ou radio -->
+                <h3>checked</h3>
+                <input type="checkbox" name="ck" id="ck" checked>
+                <input type="checkbox" name="ck" id="ck">
+                <input type="checkbox" name="ck" id="ck">
+
+                <input type="radio" name="ckr" id="ckr">
+                <input type="radio" name="ckr" id="ckr">
+                <input type="radio" name="ckr" id="ckr" checked>
             </form>
         </main>
     </body>
