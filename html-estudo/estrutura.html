@@ -12,7 +12,7 @@
 <!-- tags fundamentais: -->
 <!-- <!DOCTYPE> - <html lang=""> - <head> - <body> - um documento html sempre deve ter essas quatro tags obrigatorias -->
 
-<!DOCTYPE html> <!-- informa ao navegador que este e um documento html5 -->
+<!DOCTYPE html> <!-- informa ao navegador como interpretar o documento - atributo html - define que o documento e do tipo html5 -->
 
 <html lang="pt-BR"> <!-- elemento raiz, inicio do documento html - lang define o idioma da pagina -->
 
@@ -74,6 +74,7 @@
                 width: calc(100% - 7em);
                 margin-left: auto;
                 right: 0;
+                margin-top: 3em;
             }
 
             section, article, div{
@@ -83,37 +84,45 @@
             }
 
             aside {
-                position: absolute;
-                width: max-content;
-                height: max-content;
-                top: 50%;
-                transform: translateY(-50%);
+                width: calc(100% - 7em);
+                margin-left: auto;
+                margin-top: 1em;
+            }
+
+            #span1 {
+                color: rgb(93, 68, 217);
             }
         </style>
     </head>
 
     <body> <!-- coteudo do documento - todo conteudo visivel da pagina -->
 
-        <header> <!-- usado para colocar um cabecalho na pagina -->
+        <!-- cabecalho da pagina, podendo conter a logo, titulo da pagina e a barra de navegação principal -->
+        <header> 
             Cabeçalho - header / Estruturas
         </header>
 
-        <nav> <!-- uma secao para navegacao, onde ha links para partes da pagina ou para outras paginas -->
+        <!-- secao de navegacao, podendo estar dentro do <header> se for a navegacao principal do site, ou dentro do <main>, 
+        caso for uma navegacao secundaria para a pagina em vez do site -->
+        <nav>
             <h3>nav - Navegação:</h3>
             <a href="estrutura.html">Estrutura</a>
             <a href="textos-e-links.html">Textos e links</a>
             <a href="midias.html">Mídias</a>
             <a href="dados_estruturados.html">Dados estruturados</a>
+            <a href="formularios.html">Formulários</a>
         </nav>
 
-        <main> <!-- conteudo principal da pagina -->
+        <!-- conteudo principal da pagina, unico por pagina e nao podendo ter conteudo repetido em varias paginas (como o rodape) -->
+        <main> 
             Conteúdo principal - main
 
-            <section>  <!-- agrupa diferentes partes do conteudo - secao -->
+            <!-- secao do conteudo principal, tendo conteudo tematicamente relacionado as outras secoes da pagina -->
+            <section> 
                 Seção - section
             </section>
 
-            <!-- atributo class - usado para aplicar estilos css a varios elementos e para os selecionar com JavaScript -->
+            <!-- atributo class - usado para aplicar estilos css a varios elementos e para os selecionar com javascript -->
             <section class="classe"> 
                 Seção com classe - section
             </section>
@@ -128,20 +137,31 @@
                 Seção com css inline - section
             </section>
 
-            <article> <!-- bloco de conteudo que pode ser compreendido de forma independente - tem sentido completo por si so -->
+            <!-- bloco de conteudo independente que pode ser reutilizado, como uma noticia ou post de um blog -->
+            <article> 
                 Artigo - article
-    
-                <aside> <!-- secao de conteudo que esta relacionada ao conteudo ao redor - informacoes complementares/extras -->
-                    Conteúdo complementar - aside
-                </aside>
             </article>
     
             <div> <!-- bloco de conteudo generico, sem comportamento, normalmente usado em conjunto com classes para sua estilizacao -->
                 Bloco genérico - div
             </div>
+
+            <p>
+                Este é um 
+                <span id="span1">Span</span> <!-- parte do texto que pode ser marcado e estilizado, sem adicionar quebras de linhas -->
+                para teste
+            </p>
         </main>
+
+        <!-- conteudo complementar relacionado ao conteudo principal ou ao site em geral, como links patrocinados -->
+        <!-- caso for um complemento de uma parte do conteudo principal, pode estar dentro dentro do <main> -->
+        <!-- caso for um complemento para o site, o melhor e coloca-lo fora do main -->
+        <aside> 
+            Conteúdo complementar - aside
+        </aside>
         
-        <fotter> <!-- informacoes de rodape, como direitos autorais ou contatos para duvidas -->
+        <!-- rodape da pagina, contendo informacoes gerais, como redes sociais do desenvolvedor, sobre o site ou pagina trabalhada -->
+        <fotter> 
             Rodapé - fotter
         </fotter>
 
