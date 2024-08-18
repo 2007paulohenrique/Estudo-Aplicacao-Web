@@ -31,6 +31,7 @@
             <a href="midias.html">Mídias</a>
             <a href="dados_estruturados.html">Dados estruturados</a>
             <a href="formularios.html">Formulários</a>
+            <a href="outras_tags.html">Outras tags</a>
         </nav>
 
         <main>
@@ -249,13 +250,23 @@
             </table>
 
             <!-- tags da tabela:
-            <thead> = define o cabeçalho da tabela
-            <tbody> = define o corpo da tabela
-            <tfoot> = define o rodape da tabela
-            <th> = define uma célula de cabeçalho da tabela
+            <thead> - cabeçalho da tabela
+            <tbody> - corpo da tabela
+            <tfoot> - rodape da tabela
+            <th> - celula de cabecalho da tabela
+            <caption> - titulo da tabela
+            <colgroup> e <col> - usadas para aplicar e agrupar estilos individuais para as colunas da tabela
             -->
-            <h2>Tabela com cabeçalho e radapé</h2>
+            <h2>Tabela completa estilizada</h2>
             <table height="200" width="350"> 
+                <caption>Preços de carros</caption>
+
+                <colgroup>
+                    <col style="background-color: aliceblue;"> <!-- primeira coluna -->
+                    <col style="background-color: rgb(136, 160, 182);"> <!-- segunda coluna -->
+                    <col style="background-color: rgb(99, 168, 228);"> <!-- terceira coluna -->
+                </colgroup>
+
                 <thead>
                     <tr><th>Marca</th><th>Modelo</th><th>Ano</th><th>Valor</th></tr> 
                 </thead>

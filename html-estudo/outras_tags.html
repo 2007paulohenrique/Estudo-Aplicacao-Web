@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Outras tags</title>
+        <style>
+            @import url(base.css);
+
+            hr {
+                width: 90%;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <header>
+            Outras tags
+        </header>
+
+        <nav>
+            <h3>Navegação:</h3>
+            <a href="estrutura.html">Estrutura</a>
+            <a href="textos-e-links.html">Textos e links</a>
+            <a href="midias.html">Mídias</a>
+            <a href="dados_estruturados.html">Dados estruturados</a>
+            <a href="formularios.html">Formulários</a>
+            <a href="outras_tags.html">Outras tags</a>
+        </nav>
+
+        <main>
+            <!-- outras tags do html -->
+
+            <!-- <abbr> - usada com o atributo title para mostrar o significado de uma abreviacao ou acronimo -->
+            <h3>Abreviação</h3>
+            <span>Esta é uma abreviação - <abbr title="Instituto Federal de São Paulo">IFSP</abbr></span>
+
+            <!-- <q>, <blockquote>   <cite> - citacao curta (inline), citacao longa (block) e citacao do titulo de uma obra -->
+            <h3>Citações</h3>
+            <q>Esta é uma citação curta</q>
+            <blockquote>
+                Este é um exemplo de uma citação longa em bloco. O texto citado pode ser longo e ocupar várias linhas ou parágrafos.
+            </blockquote>
+            <span>Um dos livros mais influentes é <cite>Dom Quixote</cite> de Miguel de Cervantes.</span>
+
+            <!-- <hr> - linha hotizontal para separar conteudos -->
+            <h3>Linha horizontal</h3>
+            <hr>
+
+            <!-- <code> e <samp> - codigo de computador e saida de um programa -->
+            <h3>Código</h3>
+            <span>O código <code>console.log('Hello, world!'); </code>gera a saída <samp>Hello, world!</samp></span>
+
+            <!-- <address> - usada para inserir informacoes de contato ou enderecos de uma pessoa ou organizacao -->
+            <h3>Contato e endereço</h3>
+            <address>
+                Contato: <a href="emailexemplo@dominio.com">emailexemplo@dominio.com</a>
+                <br>
+                Telefone: (11) 92345-678
+                <br>
+                Endereço: Rua Exemplo, 123, São Paulo, SP, Brasil
+            </address>
+
+            <!-- <bdo> - usada para mudar a direcao padrao do texto -->
+            <h3>Direção dos textos</h3>
+            <bdo dir="ltr">Texto da esquerda para a direita</bdo>
+            <bdo dir="rtl">Texto da direita para a esquerda</bdo>
+
+            <!-- <del> - usada para indicar que um trecho foi removido de um texto ou documento -->
+            <h3>Trecho removido</h3>
+            <span>Esta palavra foi <del>removida</del>.</span>
+
+            <!-- <dfn> - usada para marcar o termo que esta sendo definido ou apresentado pela primeira vez em um documento -->
+            <h3>Termo definido</h3>
+            <span>A <dfn>inteligência artificial</dfn> é a simulação da inteligência humana por máquinas.</span>
+
+            <!-- <ins> - usada para indicar que um trecho de texto foi inserido em um documento -->
+            <h3>Trecho inserido</h3>
+            <span>O preço foi <ins>ajustado</ins> para refletir a nova taxa de imposto.</span>
+
+
+            <!-- <kbd> - usada para representar entradas de teclado ou comandos -->
+            <h3>Comando de teclado</h3>
+            <span>Para salvar o documento, pressione <kbd>Ctrl</kbd> + <kbd>S</kbd>.</span>
+
+
+            <!-- <small> - usado para diminuir o tamanho de um texto em relacao ao tamanho normal, usada para detalhes adicionais -->
+            <h3>Texto menor</h3>
+            <span>Este é um <small>texto menor que </small>o normal</span>
+        
+            <!-- <sub> e <sup> - usado para inserir texto como subscrito e sobrescrito -->
+            <h3>Subscrito e sobrescrito</h3>
+            <span>A água é H<sup>2</sup>O</span>
+            <span>O ácido sulfúrico é H<sub>2</sub>SO<sub>4</sub></span>
+
+            <!-- <var> - usada para representar uma variavel -->
+            <h3>Variável</h3>
+            <span>A fórmula para a área de um círculo é <var>A</var> = π × <var>r</var>².</span>
+
+            <!-- <iframe> - incorpora um documento html dentro do documento em que foi usado - frame -->
+            <!-- width, height e allowfullscreen - tamanho do frame e se ha a permissao de ativar tela cheia -->
+            <h3>Frame/janela interna</h3>
+            <iframe src="formularios.html" width="700" height="500" allowfullscreen></iframe>
+        </main>
+    </body>
+</html>
