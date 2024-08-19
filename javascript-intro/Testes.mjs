@@ -11,12 +11,15 @@ function soma(a, b) {
 }
 
 // funcao de teste para a funcao soma
-// caso a funcao passe no teste, nada sera exibido no terminal, porem se ela falhar, o erro sera exibido nele
+// caso a funcao passe no teste, nada sera exibido no terminal, porem se ela falhar, o erro sera exibido
 
 function testarSoma() {
-    strictEqual(soma(1, 2), 3); //strictEqual(funcao(argumentos), valor de retorno esperado);
+    // o primeiro argumento do strictEqual e a funcao a ser testada com valores em seus argumentos
+    // o segundo argumento e o retorno esperado e correto
 
-    // outras testes...
+    strictEqual(soma(1, 2), 4);
+
+    // outras testes com outros valores de argumento na funcao a ser testada...
 }
 
 testarSoma();

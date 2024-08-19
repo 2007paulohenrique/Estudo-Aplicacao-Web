@@ -57,15 +57,7 @@
         <title>Estrutura do HTML</title>
 
         <style> /* tag usada no <head> para inserir um estilo css interno para a pagina */
-        @import url(base.css);
-
-            * {
-                font-size: 30px;
-            }
-
-            nav {
-                gap: 1em;
-            }
+            @import url(base.css);
 
             fotter {    
                 display: flex;
@@ -92,6 +84,10 @@
             #span1 {
                 color: rgb(93, 68, 217);
             }
+
+            h2 {
+                border: none;
+            }
         </style>
     </head>
 
@@ -116,35 +112,35 @@
 
         <!-- conteudo principal da pagina, unico por pagina e nao podendo ter conteudo repetido em varias paginas (como o rodape) -->
         <main> 
-            Conteúdo principal - main
+            <h2>Conteúdo principal - main</h2>
 
             <!-- secao do conteudo principal, tendo conteudo tematicamente relacionado as outras secoes da pagina -->
             <section> 
-                Seção - section
+                <h2>Seção - section</h2>
             </section>
 
             <!-- atributo class - usado para aplicar estilos css a varios elementos e para os selecionar com javascript -->
             <section class="classe"> 
-                Seção com classe - section
+                <h2>Seção com classe - section</h2>
             </section>
 
             <!-- atributo id - usado para identificar um elemento unico na pagina - um id deve ser unico na pagina -->
             <section id="id">
-                Seção com id - section
+                <h2>Seção com id - section</h2>
             </section>
 
             <!-- atributo style - usado para aplicar css inline para um unico elemento na pagina -->
             <section style="color: black;"> 
-                Seção com css inline - section
+                <h2>Seção com css inline - section</h2>
             </section>
 
             <!-- bloco de conteudo independente que pode ser reutilizado, como uma noticia ou post de um blog -->
             <article> 
-                Artigo - article
+                <h2>Artigo - article</h2>
             </article>
     
             <div> <!-- bloco de conteudo generico, sem comportamento, normalmente usado em conjunto com classes para sua estilizacao -->
-                Bloco genérico - div
+                <h2>Bloco genérico - div</h2>
             </div>
 
             <p>
@@ -158,12 +154,12 @@
         <!-- caso for um complemento de uma parte do conteudo principal, pode estar dentro dentro do <main> -->
         <!-- caso for um complemento para o site, o melhor e coloca-lo fora do main -->
         <aside> 
-            Conteúdo complementar - aside
+            <h2>Conteúdo complementar - aside</h2>
         </aside>
         
         <!-- rodape da pagina, contendo informacoes gerais, como redes sociais do desenvolvedor, sobre o site ou pagina trabalhada -->
         <fotter> 
-            Rodapé - fotter
+            <h2>Rodapé - fotter</h2>
         </fotter>
 
         <!-- referencia um arquivo externo de javascript -->
