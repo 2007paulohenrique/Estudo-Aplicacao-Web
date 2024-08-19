@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head padrao, sem adicao de metadados -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <title>Registro</title>
+    </head>
+    <body>
+        <!-- Este formulario nao ira mandar os dados a nenhum servidor, pois so servira de exemplo, 
+        juntamente com o documento em si para mostrar a interacao entre o HTML, CSS e JavaScript,
+        durante o desenvolvimento de aplicacoes web -->
+
+        <form id="registro" action="" method="post" autocomplete="off">
+            <h1>- Registro -</h1>
+
+            <div class="input-area">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome de Usuário" autofocus onchange="validarFormato()">
+                <h5 class="alerta" id="alerta-nome">O nome deve ter entre 8 e 20 caracteres alfabéticos</h5>
+            </div>
+                
+            <div class="input-area">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="E-mail" onchange="validarFormato()">
+                <h5 class="alerta" id="alerta-email">Email inválido</h5>
+            </div>
+            
+            <div class="input-area">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Senha" onchange="validarFormato()">
+                <h5 class="alerta" id="alerta-senha">
+                    A senha deve ter entre 5 e 20 caracteres, e conter no minímo uma letra, número e símbolo
+                </h5>
+            </div>
+
+            <button type="submit"><h4>Registrar</h4></button>
+        </form>
+
+        <script src="Eventos.js"></script>
+    </body>
+</html>

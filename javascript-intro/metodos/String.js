@@ -88,7 +88,11 @@ console.log(substituidaG);
 // "[a-z]" - qualquer letra minusculas
 // "[A-Z]" - qualquer letra maiuculas
 // "[a-zA-Z]" - qualquer letra maiuscula ou minuscula
+// "[À-ÿ]" - qualquer letra acentuada
 // "{}" - numero determinado de ocorrencias seguidas
+// "+" - indica que deve haver uma ou mais ocorrencia do termo anterior
+// (?=.*...) - positive lookahead - usado para verificar se um padrao pode ser encontrado em algum lugar da string
+// (?!.*...) - negative lookahead - usado para verificar se um padrao nao esta em nenhum lugar da string
 
 let padrao = /^\(\d{3}\) \d{3}-\d{4}$/;
 
