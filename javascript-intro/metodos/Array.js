@@ -54,8 +54,22 @@ console.log(array3.includes(3));
 
 // criar novo array com os elementos de outro array que obedecem uma condicao
 
-const novoArray = array3.filter(function(elemento) {
-    return elemento > 2;
-});
-
+const novoArray = array3.filter(x => x > 2);
 console.log(novoArray);
+
+// criar novo array com os elementos transformados de outro array 
+
+const arrayTransformado = novoArray.map(x => x ** 2);
+console.log(arrayTransformado);
+
+// substituir todos os elementos de uma parte do array por um valor
+
+console.log(arrayTransformado.fill(10, 2));
+
+// verificar se algum elemento de um array obedece uma condicao
+
+console.log(arrayTransformado.some(x => x === 9));
+
+// verificar de todos os elementos de um array obedecem uma condicao
+
+console.log(arrayTransformado.every(x => x < 17));
