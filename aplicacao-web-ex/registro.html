@@ -12,8 +12,23 @@
         juntamente com o documento em si para mostrar a interacao entre o HTML, CSS e JavaScript,
         durante o desenvolvimento de aplicacoes web -->
 
+        <div id="fundo">
+            <div class="circulo" id="circ1"></div>
+            <div class="circulo" id="circ2"></div>
+            <div class="circulo" id="circ3"></div>
+            <div class="circulo" id="circ4"></div>
+            <div class="circulo" id="circ5"></div>
+        </div>
+
+        <div id="aviso-offline">
+            <h1 style="white-space: pre;">Você está <span style="text-decoration: underline;">offline</span>   = (</h1>
+            Reestabeleça a conexão com a internet para se registrar em nosso site.
+        </div>
+
         <form id="registro" action="" method="post" autocomplete="off">
             <h1>- Registro -</h1>
+
+            <h5 id="aviso">- Preencha todos os campos</h5>
 
             <div class="input-area">
                 <label for="nome">Nome</label>
@@ -23,7 +38,7 @@
                 
             <div class="input-area">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="E-mail" onchange="validarFormato()">
+                <input type="text" id="email" name="email" placeholder="E-mail" onchange="validarFormato()">
                 <h5 class="alerta" id="alerta-email">Email inválido</h5>
             </div>
             

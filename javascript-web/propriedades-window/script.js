@@ -69,7 +69,20 @@ function obterLinguagem() {
 
 function obterLocalizacao() {
     // obter um objeto de geolocalizacao do local em que o navegador esta sendo usado
-    console.log(navigator.geolocation);
+    // api que permite que paginas web acessem a localizacao geografica do usuario
+
+    // getCurrentPosition - obter posicao atual
+    navigator.geolocation.getCurrentPosition(
+        // callback chamada quando a posicao foi obtida com sucesso
+        function(pos) {
+            console.log("Latitude: " + pos.coords.latitude);
+            console.log("Longitude: " + pos.coords.longitude);
+        },
+        // callback em caso de erro - executada quando o usuario nao permite o acesso a sua localizacao
+        function(err) {
+            console.error("Erro: ", err);
+        }
+    );
 }
 
 function ObterPlataforma() {

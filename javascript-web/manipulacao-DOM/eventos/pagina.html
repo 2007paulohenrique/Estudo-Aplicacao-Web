@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página</title>
+
+        <style>
+            body {
+                background-color: rgb(40, 40, 40);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: antiquewhite;
+            }
+
+            button {
+                transform: scale(1.5);
+            }
+
+            h2 {
+                margin-top: 2em;
+            }
+
+            .classe {
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Click</h2>
+        <button id="botao1">click</button>
+
+        <h2>Click duplo</h2>
+        <button id="botao2">dblclick</button>
+        
+        <h2>Movimento do mouse</h2>
+        <button id="botao3">mousemove</button>
+        
+        <h2>Saída do ponteiro</h2>
+        <button id="botao4">mouseout</button>
+        
+        <h2>Entrada do ponteiro</h2>
+        <button id="botao5">mouseover</button>
+        
+        <h2>Click do botão direito</h2>
+        <button id="botao6">contextmenu</button>
+
+        <h2>Tecla ou teclas pressionada ("z" ou "ctrl" + "z")</h2>
+        <button id="botao7">keydown</button>
+       
+        <h2>Tecla ou teclas liberadas ("q" ou "ctrl" + "q")</h2>
+        <button id="botao8">keyup</button>
+
+        <h2>Há eventos para perca e ganho de conexão com a internet</h2>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -27,8 +27,17 @@ document.getElementById("registro").addEventListener("submit", function(evento) 
 
     const camposVazios = dados.nome === "" || dados.email === "" || dados.senha === "";
 
+    const aviso = document.getElementById("aviso");
+
+    // selecionar propriedades CSS dos elementos 
+    aviso.style.color = "black";
+
+    if (camposVazios) {
+        aviso.style.color = "red";
+    }
+
     if (!(alertaNomeV || alertaEmailV || alertaSenhaV || camposVazios)) {
-        document.write("Validação completa");
+        alert("Registrado com sucesso = )");
     }
 });
 
@@ -55,3 +64,29 @@ function validarFormato() {
         dados.alertaSenha.style.visibility = 'hidden';
     }
 }
+
+window.addEventListener("load", function() {
+    if (navigator.onLine) {
+        document.getElementById("registro").style.setProperty("display", "flex");
+        document.getElementById("aviso-offline").style.setProperty("display", "none");
+    } else {
+        document.getElementById("registro").style.setProperty("display", "none");
+        document.getElementById("aviso-offline").style.setProperty("display", "inline");
+    }
+});
+
+window.addEventListener("offline", function() {
+    document.getElementById("registro").style.setProperty("display", "none");
+    document.getElementById("aviso-offline").style.setProperty("display", "inline");
+});
+
+window.addEventListener("online", function() {
+    document.getElementById("registro").style.setProperty("display", "flex");
+    document.getElementById("aviso-offline").style.setProperty("display", "none");
+    
+    // funcao usada para atrasar a execucao em milisegundos de uma callback
+    // nesse caso, usada para que o alerta apareca depois que as alteracoes na interface sejam feitas
+    setTimeout(function() {
+        alert("Conexão recuperada  =)");
+    }, 100);
+});

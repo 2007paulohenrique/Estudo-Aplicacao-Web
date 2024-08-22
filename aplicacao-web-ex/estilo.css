@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid black;
 }
 
 :root {
@@ -18,29 +17,32 @@
 }
 
 body {
+    position: relative;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-color-dark);
+    background-image: linear-gradient(to top, var(--main-color-dark), var(--sec-color-dark), var(--main-color-dark));
     color: var(--font-color-dark);
     height: 100vh;
-    overflow-y: hidden;
+    overflow: hidden;
     letter-spacing: 0.5px;
 }
 
 #registro {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(to top, var(--main-color-light), var(--sec-color-light));
-    width: 25em;
-    height: max-content;
-    padding: 2em 1em;
+    width: 29.5%;
+    min-width: 25em;
+    height: 86%;
+    max-height: 50em;
+    padding: 0 1em; 
     border-radius: 10%;
-    box-shadow: 10px 10px 15px black, -10px -10px 15px black, 10px -10px 15px black, -10px 10px 15px black;
-    border: none;
+    border: 1px solid black;
     user-select: none;
 }
 
@@ -52,13 +54,14 @@ body {
 }
 
 form h1 {
-    margin-bottom: 3em;
+    margin-top: 1em;
+    margin-bottom: auto;
     letter-spacing: unset;
 }
 
 .input-area {
     width: 100%;
-    margin-bottom: 1em;
+    margin-top: 1em;
 
 }
 
@@ -85,7 +88,7 @@ button {
     color: var(--font-color-inter);
     padding: 0.5em 1.5em;
     border-radius: 0.8em;
-    margin-top: 1em;
+    margin: auto 0 2em 0;
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease-out;
@@ -93,4 +96,243 @@ button {
 
 button:hover {
     transform: scale(1.1);
+}
+
+#aviso {
+    display: none;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#aviso-offline {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+    transform: translateX(-50%);
+    background-color: var(--main-color-dark);
+    border: 4px solid var(--main-color-light);
+    color: var(--font-color-light);
+    padding: 2em 2em 1em 2em;
+    box-shadow: 10px 10px 15px var(--sec-color-dark) inset;
+    z-index: -1;
+}
+
+#aviso-offline h1 {
+    margin-left: 1em;
+}
+
+
+#fundo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+#fundo .circulo {
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient(circle, #ffffffc5, var(--sec-color-light));
+    border: 1px solid rgba(255, 255, 255, 0.745);
+    box-shadow: 10px 10px 50px var(--sec-color-light),
+                -10px 10px 50px var(--sec-color-light),
+                10px -10px 50px var(--sec-color-light),
+                -10px -10px 50px var(--sec-color-light),
+                5px 5px 20px white,
+                -5px 5px 20px white,
+                5px -5px 20px white,
+                -5px -5px 20px white;
+    animation: oscilar 5s ease-in-out infinite;
+}
+
+@keyframes oscilar {
+    0% {
+        transform: scale(1);
+    } 
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#circ1 {
+    width: 10em;
+    height: 10em;
+    top: 5%;
+    left: 17.5%;
+}
+
+#circ2 {
+    width: 15em;
+    height: 15em;
+    top: 58%;
+    left: 3.5%;
+}
+
+#circ3 {
+    width: 20em;
+    height: 20em;
+    top: 39%;
+    right: 29%;
+}
+
+#circ4 {
+    width: 13em;
+    height: 13em;
+    top: 18%;
+    right: 8%;
+}
+
+#circ5 {
+    width: 17em;
+    height: 17em;
+    top: 90%;
+    right: 12%;
+}
+
+/* smartphones pequenos */
+@media screen and (max-width: 348px) {
+    body {
+        font-size: 11px !important;
+    }
+
+    #aviso-offline {
+        font-size: 9px;
+    }
+
+    #aviso-offline h1 {
+        margin-left: 0;
+    }
+}
+
+/* smartphones em modo retrato */
+@media screen and (max-width: 480px) {
+    #registro {
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        border-radius: initial;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    button {
+        margin: auto 0 1em 0;
+    }
+
+    #fundo{
+        display: none;
+    }
+
+    #aviso {
+        display: initial;
+        margin-top: 5em;
+    }
+
+
+}
+
+/* smartphones em modo paisagem e tablets pequenos */
+@media screen and (min-width: 481px) and (max-width: 940px) {
+    #registro {
+        height: 100%;
+        width: 100%;
+        max-height: 40em;
+        overflow-y: auto;
+        border-radius: initial;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    button {
+        margin: 2em 0 1em 0;
+    }
+
+    #fundo{
+        display: none;
+    }
+
+    #aviso {
+        display: initial;
+        margin-top: 3em;
+    }
+}
+
+/* tablets grandes e laptops com telas menores */
+@media screen and (min-width: 941px) and (max-width: 1024px) {
+    body {
+        font-size: 17px;
+    }
+    
+    button {
+        margin: auto 0 1em 0;
+    }
+    
+    #fundo {
+        transform: scale(1);
+    }
+    
+    #registro {
+        min-height: 31em;
+    }
+}
+
+/* desktops padrao e telas grandes de laptops */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+
+    #fundo {
+        transform: scale(1);
+    }
+
+    #registro {
+        min-height: 31em;
+    }
+}
+
+/* desktops com telas muito grandes e tvs */
+@media screen and (min-width: 1201px) {
+    #registro {
+        min-height: 30em;
+    }
+}
+
+@media screen and (min-width: 1201px) and (min-height: 600px) {
+    #aviso {
+        display: initial;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (min-height: 570px) {
+    #aviso {
+        display: initial;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (min-height: 520px) {
+    #aviso {
+        display: initial;
+    }
+}
+
+@media screen and (max-height: 500px) and (max-width: 1024px) {
+    #registro {
+        height: 100%;
+        min-height: 0;
+        width: 100%;
+        overflow-y: auto;
+        border-radius: initial;
+    }
 }

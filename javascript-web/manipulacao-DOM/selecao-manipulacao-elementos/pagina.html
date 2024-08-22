@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página</title>
+        <style>
+            body {
+                background-color: rgb(40, 40, 40);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: antiquewhite;
+            }
+
+            button {
+                margin: 1em;
+                transform: scale(1.5);
+            }
+
+            .classe {
+                color: blue;
+            }
+
+            h2 {
+                margin-top: 2em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Obter elemento por id</h2>
+        <input type="text" id="elemento1">
+        <button onclick="obterElementoPorId()">Obter</button>
+
+        <h2>Obter elementos por classe</h2>
+        <input type="text" class="classe1">
+        <input type="text" class="classe1">
+        <input type="text" class="classe1">
+        <button onclick="obterElementosPorClasse()">Obter</button>
+
+        <h2>Obter elementos por tag</h2>
+        <h4>1</h4>
+        <h4>2</h4>
+        <h4>3</h4>
+        <button onclick="obterElementosPorTag()">Obter</button>
+
+        <h2>Obter elementos por seletor</h2>
+        <h4 id="seletor">1</h4>
+        <h4 id="seletor">2</h4>
+        <h4 id="seletor">3</h4>
+        <button onclick="obterElementosPorSeletor()">Obter</button>
+
+        <h2>Modificar texto</h2>
+        <h4 id="elemento2">1</h4>
+        <button onclick="modificarTexto()">Modificar</button>
+
+        <h2>Modificar HTML</h2>
+        <h4 id="elemento3">1</h4>
+        <button onclick="modificarHTML()">Modificar</button>
+
+        <h2>Modificar e remover atributo</h2>
+        <h4 id="elemento4">1</h4>
+        <button onclick="modificarAtributo()">Modificar</button>
+        <button onclick="removerAtributo()">Remover</button>
+
+        <h2>Adicionar e remover classe</h2>
+        <h4 id="elemento5">1</h4>
+        <button onclick="modificarClasse()">Adicionar</button>
+        <button onclick="removerClasse()">Remover</button>
+        <button onclick="alternarPresencaClasse()">Alternar</button>
+
+        <h2>Obter valor de atributo</h2>
+        <h4 id="elemento6" class="classe">1</h4>
+        <button onclick="ObterValorAtributo()">Obter</button>
+
+
+        <h2>Criar elemento</h2>
+        <h4 id="elemento7"></h4>
+        <button onclick="criarElemento()">Criar</button>
+        <button onclick="removerElemento()">Remover</button>
+        <button onclick="substituirElemento()">Substituir</button>
+
+        <h2>Adicionar texto</h2>
+        <h4 id="elemento9">Texto original</h4>
+        <button onclick="adicionarTexto()">Adicionar</button>
+
+        <script src="script.js"></script>
+    </body>
+</html>
