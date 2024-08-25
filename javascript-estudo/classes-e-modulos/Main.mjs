@@ -1,6 +1,9 @@
 import Funcionario from "./Funcionario.mjs";
 import Pessoa from "./Pessoa.mjs";
 
+
+// modulos ES (ECMAScript) - maneira moderna de organizar e reutilizar codigo javascript em arquivos separados
+
 // modulos
 // blocos de codigo independentes que encapsulam funcionalidades especificas e 
 // podem ser reutilizados em diferentes partes de um programa

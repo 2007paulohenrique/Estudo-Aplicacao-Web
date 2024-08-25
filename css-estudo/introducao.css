@@ -25,8 +25,12 @@ atraves da tag <link> - <link rel="stylesheet" href="estilo.css"> */
 /* border - linha em torno da caixa do conteudo e padding */
 /* margin - espaco entre a borda do elemento e outros elementos ao redor */
 
+/* propriedades - caracteristicas especificas que podem ser definidas para estilizar os elementos html em uma pagina web */ 
+/* cada propriedade controla um aspecto particular do estilo de um elemento */
+/* propriedade = aspecto - valor; */
+
 div {
-    padding: 20px;
+    padding: 20px; /* propriedade */
     border: 2px solid black;
     margin: 10px;
 }
