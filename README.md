@@ -1,6 +1,6 @@
 # Estudo de Aplicações Web  
 
-Este repositório foi criado com o objetivo de estudar e praticar HTML, CSS e JavaScript, tanto de forma isolada quanto em conjunto, para o desenvolvimento front-end de aplicações web. Nele, são explorados conceitos e técnicas fundamentais para a construção de interfaces de usuário responsivas e dinâmicas, utilizando exemplos práticos para melhor demonstração das funcionalidades das linguagens estudadas.
+Este repositório foi criado com o objetivo de estudar HTML, CSS e JavaScript, tanto de forma isolada quanto em conjunto, para o desenvolvimento front-end de aplicações web. Nele, são explorados conceitos e técnicas fundamentais para a construção de páginas web responsivas e dinâmicas, utilizando exemplos práticos para melhor demonstração das funcionalidades das linguagens estudadas.
 
 ## Instalação
 
